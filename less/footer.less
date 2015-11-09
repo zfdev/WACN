@@ -1,0 +1,170 @@
+//#Footer
+//##Default View: Mobile Screen
+
+.footer{
+    background-color: @blue-gray-dark;
+    padding-top: 20px;
+    .footer-navigation{
+        >.container{
+            >ul
+            {
+                overflow: hidden;
+                >li{
+                    list-style: none;
+                    border-bottom: 1px solid #3f4957;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    >.footer-title{
+                        margin-top: 0;
+                        margin-bottom: 0; 
+                        font-size: @base-font-size;
+                        line-height: 54px;
+                        font-weight: normal;
+                        color: @palette-gray-dark;
+                        .icon-arrow-top{
+                            line-height: 54px;
+                            font-size: 24px;
+                        }
+                    }
+                    >ul{
+                        .do-animation(max-height);   
+                        max-height: 0;
+                        overflow: hidden;
+                        >li{
+                            list-style: none;
+                            margin-bottom: 8px;
+                            a{
+                                color: @white;
+                                display: block;
+                                .clear-link-style;
+                                font-size: @base-font-size;
+                                line-height: 22px;
+                                vertical-align: middle;
+                                &:hover{
+                                    color: @ui-section-blue;
+                                } 
+                                .icon{
+                                    display: block;
+                                    float: left;
+                                    margin-right: 8px;
+                                    margin-top: 2px;
+                                    font-size: @font-size-large;
+                                }
+                            }
+                        }
+                        &.show-xs{
+                            margin-bottom: 15px;
+                            max-height: @footer-menu-child-max-height;
+                        }                        
+                        &.show-sm{
+                            margin-bottom: 15px;
+                            max-height: @footer-menu-child-max-height;
+                        }
+                    }          
+                }           
+            }            
+        }    
+    }
+    .footer-bottom{
+        margin-top: 15px;
+        padding-bottom: 15px;
+        .footer-infomation{          
+            border-top: 1px solid @blue-gray-light;
+            padding-top: 15px;
+            color: @white;
+            font-size: @font-size-small;                        
+            p{
+                margin: 0;
+                a{
+                    color: @white;
+                    line-height: 24px;      
+                    .clear-link-style;
+                    display: block;
+                    float: left; 
+                    &:hover{
+                        color: @ui-section-blue;
+                    }                   
+                }
+                span{
+                    line-height: 24px;      
+                } 
+            }
+            .footer-help{
+                a{
+                    margin-right: 25px;
+                }
+            }
+            .copyright{
+                margin-top: 5px;
+                span{
+                    display: block;
+                    float: left;
+                    margin-left: 8px;
+                    margin-right: 8px;                                           
+                }
+                .footer-logo{
+                    overflow: hidden;
+                    height: 24px;
+                    text-indent: @text-indent-hide;
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    &.window-azure{
+                        width: 92px;
+                        .img-retina("../img/logo-azure-footer.png","../img/logo-azure-footer-2x.png",92px,11px);     
+                    }
+                    &.carrier{
+                        width: 73px;
+                        .img-retina("../img/logo-azure-carrier-footer.png","../img/logo-azure-carrier-footer-2x.png",73px,12px);                        
+                    }
+                    &.microsoft{
+                         width: 70px;
+                        .img-retina("../img/logo-microsoft.png","../img/logo-microsoft-2x.png",70px,14px); 
+                    }            
+                }                   
+            }                        
+        }
+
+    }
+            
+}
+//##Desktop screen
+@media @desktop-screen{
+    .footer{
+        .footer-navigation{
+            >.container{
+                >ul{
+                    >li{
+                        width: 25%;
+                        float: left;
+                        border-bottom: none;
+                        .footer-title{
+                            .icon-arrow-top{
+                                display: none;
+                            }
+                            &:hover{
+                                cursor: default;
+                            }
+                        }
+                        >ul{
+                            margin-bottom: 15px;
+                            max-height: inherit;
+                        }
+                    }
+                }
+            }    
+        }
+        .footer-bottom{
+            .footer-infomation{
+                border-top: 1px solid @blue-gray-light;
+                .footer-help{
+                    float: left; 
+                }
+                .copyright{
+                    float: right;
+                    margin-top: 0;                     
+                }   
+            }    
+        }    
+    }   
+}

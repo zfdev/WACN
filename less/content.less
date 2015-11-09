@@ -1,0 +1,47 @@
+//#Content
+.content{
+    margin-top: 87px;
+    .container{
+       .do-animation; 
+    }     
+    .content-blog{
+        padding-top: 20px;
+        padding-bottom: 40px;
+        color: @blue-gray-light;
+        h1{
+            font-size: 32px;
+            font-weight: normal;
+        }
+        h2{
+            font-size: @subtitle-font-size;
+            font-weight: normal;
+        }
+        p{
+            font-size: @base-font-size;
+        }
+        .grid-demo{
+            margin-bottom: 15px;
+        }
+    }
+    //Responsive grid demo style
+    [class^=col-] {
+        color: #333;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(239, 19, 50, .3);
+        border: 1px solid rgba(239, 19, 50, .1);
+    }
+}
+//##Tablet screen
+@media @tablet-screen{
+    .content{
+        margin-top: 64px;
+    }            
+}
+//##Desktop screen
+@media @desktop-screen{
+    .content{
+        margin-top: 100px;
+    }             
+}
