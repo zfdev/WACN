@@ -23,9 +23,24 @@
     }
 }
 
+//##Transation
+.transiton(@transition){
+  -webkit-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition    
+}
+
+//##Rotate
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees); // IE9 only
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+
 //##Animation 
 .do-animation(@property: all, @duration: .3s, @time-function: ease-in-out){
-    transition: @property @duration @time-function;
+   .transiton(@property @duration @time-function);
 }
 
 //##Retina image
@@ -42,6 +57,17 @@
     background-image: url("@{file-2x}");
     background-size: @width-1x @height-1x;
   }
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
 }
 
 //##Media query
@@ -105,6 +131,11 @@
             }    
         }        
     }  
+}
+
+//#Text input
+.text-input{
+    padding: 0;
 }
 
 //#$Panel
