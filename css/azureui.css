@@ -5,7 +5,7 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: Segoe UI, Helvetica, Arial, Tahoma, 微软雅黑, 冬青黑体简体, 黑体;
+  font-family: Segoe UI, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", Helvetica, Arial, Tahoma, sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
