@@ -1,5 +1,6 @@
 @media only screen and (max-width: 981px) {
   .no-scroll {
+    position: relative;
     overflow: hidden;
   }
 }
@@ -711,7 +712,7 @@
     display: block;
     float: left;
     margin-right: 70px;
-    line-height: 22px;
+    line-height: 24px;
     color: #b6c1cf;
   }
   .header .brand .top-nav .search:link {
@@ -732,7 +733,7 @@
   .header .brand .top-nav .search .icon-search {
     font-weight: normal;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 24px;
   }
   .header .nav {
     display: block;
