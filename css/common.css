@@ -19,9 +19,6 @@
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
-.accordian-menu .menu-title:active {
-  color: #00a3d9;
-}
 .accordian-menu .menu-title:hover {
   cursor: pointer;
 }
@@ -243,6 +240,8 @@
   font-size: 14px;
   color: #b6c1cf;
   border-bottom: 4px solid transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 .header .nav > ul > li > a:link {
   text-decoration: none;
@@ -281,6 +280,8 @@
   font-weight: inherit;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-title a {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   color: #b6c1cf;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-title a:link {
@@ -339,6 +340,8 @@
   height: 32px;
   line-height: 32px;
   text-indent: 20px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > a:link {
   text-decoration: none;
@@ -380,6 +383,8 @@
   border-top: 1px solid rgba(182, 193, 207, 0.6);
   display: block;
   color: #323a45;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl dt > a:link {
   text-decoration: none;
