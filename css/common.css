@@ -58,7 +58,7 @@
   padding: 0;
 }
 .panel-wrapper {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -77,6 +77,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #edf0f5;
+}
+@media only screen and (max-width: 981px) {
+  .panel-wrapper .panel-title {
+    width: 100%;
+  }
 }
 .header {
   position: fixed;
