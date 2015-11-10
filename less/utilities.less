@@ -25,6 +25,17 @@
     }
 }
 
+//##Remove the touch highlight 
+.remove-tab-highlight(){
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//##Remove the touch delay 
+.remove-pointer-event(){
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;    
+}
+
 //##Transation
 .transiton(@transition){
   -webkit-transition: @transition;
@@ -94,7 +105,12 @@
 
 //#$Accordian Menu
 .accordian-menu{
+    .remove-tab-highlight;
     .menu-title{
+        .remove-pointer-event;
+        &:active{
+            color: @ui-section-blue; 
+        }
         &:hover{
             cursor: pointer;
         }
@@ -149,7 +165,7 @@
     width: 100%;
     background-color: @header-child-menu-panel-bg-color;
     overflow: hidden;
-    >.panel-title{
+    .panel-title{
         height: 65px;
         color: @ice-blue;
         font-weight: normal;
@@ -157,8 +173,9 @@
         background-color: @blue-gray-dark;
         text-align: center;    
     }
-    >.panel-content{
+    .panel-content{
         padding-top: 30px;
         padding-bottom: 30px;
+        background-color: @header-child-menu-panel-bg-color;
     }
 }

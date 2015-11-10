@@ -436,6 +436,9 @@ var App = (function($, AUI, win, doc) {
 		}
 
 		var fChildMenuColse = function() {
+			if(!bIsDesktopMode){
+				return;
+			}
 			o$AllNavLink.removeClass("active");
 			o$ChildMenu.removeClass("show");
 			fNavigationClose();

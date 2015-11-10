@@ -12,6 +12,16 @@
     -webkit-overflow-scrolling: touch;
   }
 }
+.accordian-menu {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.accordian-menu .menu-title {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+.accordian-menu .menu-title:active {
+  color: #00a3d9;
+}
 .accordian-menu .menu-title:hover {
   cursor: pointer;
 }
@@ -58,7 +68,7 @@
   background-color: #edf0f5;
   overflow: hidden;
 }
-.panel-wrapper > .panel-title {
+.panel-wrapper .panel-title {
   height: 65px;
   color: #b6c1cf;
   font-weight: normal;
@@ -66,9 +76,10 @@
   background-color: #323a45;
   text-align: center;
 }
-.panel-wrapper > .panel-content {
+.panel-wrapper .panel-content {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: #edf0f5;
 }
 .header {
   position: fixed;
@@ -150,6 +161,8 @@
   display: block;
   float: left;
   color: #b6c1cf;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 .header .brand .top-nav .nav-toggle:link {
   text-decoration: none;
@@ -180,6 +193,8 @@
   float: left;
   margin-right: 20px;
   color: #b6c1cf;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 .header .brand .top-nav .search:link {
   text-decoration: none;
