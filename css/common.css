@@ -9,6 +9,7 @@
   .auto-scroll {
     overflow-x: hidden!important;
     overflow-y: auto!important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 .accordian-menu .menu-title:hover {
@@ -605,6 +606,9 @@
   }
   .header .nav {
     margin-top: 19px;
+  }
+  .header .search-panel {
+    top: 64px;
   }
 }
 .header.hide {

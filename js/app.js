@@ -172,7 +172,7 @@ var App = (function($, AUI, win, doc) {
 	var oHeaderAutoHide = (function() {
 		var o$Header = $(".header");
 		var oConfig = {
-			autoHideHeight: 87
+			autoHideHeight: 150
 		}
 		var fHideHeader = function() {
 			o$Header.addClass("hide");
