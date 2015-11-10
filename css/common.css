@@ -711,6 +711,7 @@
     display: block;
     float: left;
     margin-right: 70px;
+    line-height: 22px;
     color: #b6c1cf;
   }
   .header .brand .top-nav .search:link {
@@ -731,6 +732,7 @@
   .header .brand .top-nav .search .icon-search {
     font-weight: normal;
     font-size: 18px;
+    line-height: 22px;
   }
   .header .nav {
     display: block;
@@ -948,12 +950,18 @@
   .header .nav .portal-link {
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 21px;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
     background-color: inherit;
+    line-height: 24px;
+    border-top: 0;
+  }
+  .header .nav .portal-link .icon-portal {
+    line-height: 24px;
+    height: 24px;
   }
   .header .search-panel {
     background-color: transparent;
