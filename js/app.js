@@ -150,12 +150,12 @@ var App = (function($, AUI, win, doc) {
 			if (!o$Body.hasClass("no-scroll")) {
 				o$Body.addClass("no-scroll");
 			}
-			o$doc.on("touchmove", function(e){
-				e.preventDefault();	
-			})
-			o$Body.on("touchmove", function(e){
-				e.stopPropagation();		
-			});
+//			o$doc.on("touchmove", function(e){
+//				e.preventDefault();	
+//			})
+//			o$Body.on("touchmove", function(e){
+//				e.stopPropagation();		
+//			});
 		}
 		var fScroll = function() {
 			if (o$Body.hasClass("no-scroll")) {
@@ -232,7 +232,9 @@ var App = (function($, AUI, win, doc) {
 			return false;
 		}
 		var fOpen = function() {
-			$("#searchInput").trigger("focus");
+			if(bIsDesktopMode){
+				$("#searchInput").trigger("focus");	
+			}			
 			o$SearchPanel.addClass("show");
 			if(!bIsDesktopMode){
 				o$SearchToggleBtn.removeClass("icon-search").addClass("icon-close");	

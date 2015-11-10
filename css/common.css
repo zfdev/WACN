@@ -479,16 +479,27 @@
   width: 100%;
   left: 0;
   top: 9px;
-  color: #323a45;
+  color: #b6c1cf;
   font-size: 14px;
   line-height: 22px;
   text-indent: 40px;
 }
 .header .search-panel .container .search-input .input-wrapper .text-input:focus {
+  color: #323a45;
   outline: 0;
 }
 .header .search-panel .container .search-input .input-wrapper .text-input::-ms-clear {
   display: none;
+}
+.header .search-panel .container .search-input .input-wrapper .text-input::-moz-placeholder {
+  color: #323a45;
+  opacity: 1;
+}
+.header .search-panel .container .search-input .input-wrapper .text-input:-ms-input-placeholder {
+  color: #323a45;
+}
+.header .search-panel .container .search-input .input-wrapper .text-input::-webkit-input-placeholder {
+  color: #323a45;
 }
 .header .search-panel .container .search-input .input-wrapper .icon {
   position: absolute;
