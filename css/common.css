@@ -58,14 +58,17 @@
   padding: 0;
 }
 .panel-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   background-color: #edf0f5;
   overflow: hidden;
 }
 .panel-wrapper .panel-title {
+  position: absolute;
+  top: 0;
   height: 65px;
   color: #b6c1cf;
   font-weight: normal;
@@ -74,6 +77,9 @@
   text-align: center;
 }
 .panel-wrapper .panel-content {
+  width: 100%;
+  position: absolute;
+  top: 65px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #edf0f5;
@@ -275,7 +281,7 @@
   visibility: visible;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-title {
-  position: relative;
+  position: absolute;
 }
 .header .nav > ul > li > .panel-wrapper > .panel-title h3 {
   margin-top: 0;
