@@ -145,10 +145,17 @@ var App = (function($, AUI, win, doc) {
 	//Body Scroll
 	var fBody = (function() {
 		var o$Body = $("body");
+		var bScrollAble = true;
 		var fNoScroll = function() {
 			if (!o$Body.hasClass("no-scroll")) {
 				o$Body.addClass("no-scroll");
 			}
+			o$doc.on("touchmove", function(e){
+				e.preventDefault();	
+			})
+			o$Body.on("touchmove", function(e){
+				e.stopPropagation();		
+			});
 		}
 		var fScroll = function() {
 			if (o$Body.hasClass("no-scroll")) {
