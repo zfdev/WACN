@@ -144,7 +144,7 @@ var App = (function($, AUI, win, doc) {
 
 	//Body Scroll
 	var oBodyScroll = (function() {
-		var o$Body = $("body");
+		var o$Body = $(".page");
 		var bScrollAble = true;
 		var fNoScroll = function() {
 			if (!o$Body.hasClass("no-scroll")) {
