@@ -57,10 +57,7 @@
   padding: 0;
 }
 .panel-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: absolute;
   background-color: #edf0f5;
   overflow: hidden;
 }
@@ -119,6 +116,12 @@
   background-color: #edf0f5;
 }
 @media only screen and (max-width: 981px) {
+  .panel-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   .panel-wrapper .panel-title {
     width: 100%;
   }

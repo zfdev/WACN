@@ -155,12 +155,9 @@
 }
 
 //#$Panel
-.panel-wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
+.panel-wrapper{  
     //bottom: 0;
-    width: 100%;
+    position: absolute;
     background-color: @header-child-menu-panel-bg-color;
     overflow: hidden;
     .panel-title{
@@ -211,6 +208,10 @@
 }
 @media @mobile-devices-screen{
     .panel-wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;        
         .panel-title{
             width: 100%;
         }  
