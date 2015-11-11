@@ -612,6 +612,12 @@
 .header .search-panel .container .search-history ul li a:active {
   text-decoration: none;
 }
+.header .search-panel .container .search-history ul li a:hover {
+  color: #00a3d9;
+}
+.header .search-panel .container .search-history ul li a:active {
+  color: #00a3d9;
+}
 .header .search-panel .container .search-history .clear-btn {
   color: #89919c;
   border-top: 1px solid #b6c1cf;
