@@ -22,7 +22,7 @@ var App = (function($, AUI, win, doc) {
 	var bIsTabletMode = false;
 	var bIsDesktopMode = false;
 	var o$win = $(win);
-	var o$doc = $(doc);
+	var o$Doc = $(doc);
 
 	//View Mode
 	var oTestScreen = (function() {
@@ -143,28 +143,39 @@ var App = (function($, AUI, win, doc) {
 	})();
 
 	//Body Scroll
-	var fBody = (function() {
+	var oBodyScroll = (function() {
 		var o$Body = $("body");
 		var bScrollAble = true;
 		var fNoScroll = function() {
 			if (!o$Body.hasClass("no-scroll")) {
 				o$Body.addClass("no-scroll");
 			}
-//			o$doc.on("touchmove", function(e){
-//				e.preventDefault();	
-//			})
-//			o$Body.on("touchmove", function(e){
-//				e.stopPropagation();		
-//			});
+
 		}
 		var fScroll = function() {
 			if (o$Body.hasClass("no-scroll")) {
 				o$Body.removeClass("no-scroll");
 			}
 		}
+		var fInit = function(){
+			o$Doc.on("touchmove", function(e){
+				e.preventDefault();
+			})
+			o$Body.on("touchstart", ".no-scroll", function(e){
+				if(e.currentTarget.scrollTop === 0){
+					e.currentTarget.scrollTop = 1;
+				}else if(e.currentTarget.scrollHeight == e.currentTarget.scrollTop + e.currentTarget.offsetHeight){
+					e.currentTarget.scrollTop -=1;	
+				}
+			});
+			o$Body.on("touchmove", ".no-scroll", function(e){
+				e.stopPropagation();		
+			});				
+		}
 		return {
 			noScroll: fNoScroll,
-			scroll: fScroll
+			scroll: fScroll,
+			init: fInit
 		}
 	})();
 
@@ -239,7 +250,7 @@ var App = (function($, AUI, win, doc) {
 			if(!bIsDesktopMode){
 				o$SearchToggleBtn.removeClass("icon-search").addClass("icon-close");	
 			}			
-			fBody.noScroll();
+			oBodyScroll.noScroll();
 			_oConfig.openCall && _oConfig.openCall();
 			//log("Search Panel Open", _oConfig.openCall);
 		}
@@ -248,7 +259,7 @@ var App = (function($, AUI, win, doc) {
 			if(!bIsDesktopMode){
 				o$SearchToggleBtn.addClass("icon-search").removeClass("icon-close");	
 			}			
-			fBody.scroll();
+			oBodyScroll.scroll();
 			_oConfig.closeCall && _oConfig.closeCall();
 		}
 		var fInputBlur = function() {
@@ -258,8 +269,8 @@ var App = (function($, AUI, win, doc) {
 		}
 		var fInit = function(oConfig) {
 			_oConfig = $.extend({}, oDefaults, oConfig);
-			o$doc.on("click", ".search,.search-cancel a", fToggleSearchPanel);
-			o$doc.on("blur", "#searchInput", fInputBlur);
+			o$Doc.on("click", ".search,.search-cancel a", fToggleSearchPanel);
+			o$Doc.on("blur", "#searchInput", fInputBlur);
 		}
 		return {
 			open: fOpen,
@@ -321,7 +332,7 @@ var App = (function($, AUI, win, doc) {
 		}
 		SearchHistory.prototype.bind = function() {
 			var self = this;
-			o$doc.on("click", self.config.$clearButton.selector, self, self.clearAll);
+			o$Doc.on("click", self.config.$clearButton.selector, self, self.clearAll);
 		}
 		SearchHistory.prototype._fGetLocalKeywords = function() {
 			return AUI.Storage.get(this.config.localDataName) || [];
@@ -407,7 +418,7 @@ var App = (function($, AUI, win, doc) {
 		var fNavigationOpen = function() {
 			o$Nav.addClass("show");
 			oSearchPanel.close();
-			fBody.noScroll();
+			oBodyScroll.noScroll();
 			$(".nav-toggle>.icon").removeClass("icon-navigation").addClass("icon-close");
 		}
 		var fNavigationHide = function() {
@@ -417,7 +428,7 @@ var App = (function($, AUI, win, doc) {
 		}
 		var fNavigationClose = function() {
 			fNavigationHide();
-			fBody.scroll();
+			oBodyScroll.scroll();
 		}
 		var fToggleChildMenu = function() {
 			//log(this);
@@ -431,7 +442,7 @@ var App = (function($, AUI, win, doc) {
 			//			}
 			o$ChildMenu.removeClass("show");
 			$(this).next(".panel-wrapper").addClass("show");
-			fBody.noScroll();
+			oBodyScroll.noScroll();
 			return false;
 		}
 
@@ -442,7 +453,7 @@ var App = (function($, AUI, win, doc) {
 			o$AllNavLink.removeClass("active");
 			o$ChildMenu.removeClass("show");
 			fNavigationClose();
-			fBody.scroll();
+			oBodyScroll.scroll();
 			return false;
 		}
 
@@ -468,12 +479,12 @@ var App = (function($, AUI, win, doc) {
 		}
 
 		var fInit = function() {
-			o$doc.on("click", ".nav-toggle", fToggleNavigation);
-			o$doc.on("click", ".nav > ul > li > a", fToggleChildMenu);
-			o$doc.on("click", ".content", fChildMenuColse);
-			o$doc.on("mouseover", ".nav .panel-content dl dd", fDdHover);
-			o$doc.on("mouseout", ".nav .panel-content dl dd", fDdHover);
-			o$doc.on("click", ".nav .panel-content dl dd", fDdClick);
+			o$Doc.on("click", ".nav-toggle", fToggleNavigation);
+			o$Doc.on("click", ".nav > ul > li > a", fToggleChildMenu);
+			o$Doc.on("click", ".content", fChildMenuColse);
+			o$Doc.on("mouseover", ".nav .panel-content dl dd", fDdHover);
+			o$Doc.on("mouseout", ".nav .panel-content dl dd", fDdHover);
+			o$Doc.on("click", ".nav .panel-content dl dd", fDdClick);
 			fCountElementDt();
 		}
 
@@ -597,7 +608,7 @@ var App = (function($, AUI, win, doc) {
 		var fBindEvent = function(oPanelDom) {
 			$(oPanelDom).on("click.panel", ".panel-title .icon-close", function() {
 				$(this).parents(".panel-wrapper").removeClass("show");
-				fBody.scroll();
+				oBodyScroll.scroll();
 				return false;
 			});
 		}
@@ -672,8 +683,9 @@ var App = (function($, AUI, win, doc) {
 
 	return {
 		init: function() {
-			oTestScreen.init();
+			oTestScreen.init();			
 			oHeaderAutoHide.init();
+			oBodyScroll.init();
 			oSearchPanel.init({
 				openCall: oNavigation.hide
 			});

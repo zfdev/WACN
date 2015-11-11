@@ -1,11 +1,4 @@
 @media only screen and (max-width: 981px) {
-  .no-scroll {
-    position: fixed;
-    overflow: hidden;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 981px) {
   .auto-scroll {
     overflow-x: hidden!important;
     overflow-y: auto!important;
