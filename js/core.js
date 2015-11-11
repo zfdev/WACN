@@ -4,11 +4,10 @@
 	win.AUI = win.AUI || {};
 	AUI.VERSION = "0.0.1";
 	AUI.Class = function() {
-
+		
 	}
 	AUI.Template = (function() {
 		var cache = {};
-
 		var tmpl = function(str, data) {
 			// Figure out if we're getting a template, or if we need to
 			// load the template - and be sure to cache the result.

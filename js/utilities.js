@@ -2,6 +2,32 @@
 (function(win) {
 	"use strict";
 	var AUI = win.AUI;
+	//Throttle
+	AUI.throttle = function(fFunction, nThreshhold, oScope){
+		nThreshhold || (nThreshhold = 250);
+		var nLast,
+			oDeferTimer;
+		return function(){
+			var oContext,
+				nNow,
+				oArgs;
+			oContext = oScope || this;
+			nNow = +new Date();
+			oArgs = arguments;
+			if(nLast && (nNow < nLast + nThreshhold)){
+				clearTimeout(oDeferTimer);
+				oDeferTimer = setTimeout(function(){
+					nLast = nNow;
+					fFunction.apply(oScope, oArgs);	
+				}, nThreshhold);					
+			}else{
+				nLast = nNow;
+				fFunction.apply(oScope, oArgs);
+			}
+	
+		}
+	}
+	
 	//Local Storage
 	AUI.Storage = (function() {
 		var fLocalStorageSupported = function() {

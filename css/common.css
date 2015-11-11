@@ -60,14 +60,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #edf0f5;
   overflow: hidden;
 }
 .panel-wrapper .panel-title {
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 65px;
   color: #b6c1cf;
   font-weight: normal;
@@ -75,10 +73,47 @@
   background-color: #323a45;
   text-align: center;
 }
+.panel-wrapper .panel-title h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 65px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.panel-wrapper .panel-title a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  height: 24px;
+  width: 24px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  color: #b6c1cf;
+}
+.panel-wrapper .panel-title a:link {
+  text-decoration: none;
+}
+.panel-wrapper .panel-title a:visited {
+  text-decoration: none;
+}
+.panel-wrapper .panel-title a:hover {
+  text-decoration: none;
+}
+.panel-wrapper .panel-title a:active {
+  text-decoration: none;
+}
+.panel-wrapper .panel-title a .icon-close {
+  font-size: 24px;
+}
+.panel-wrapper .panel-title a:hover {
+  color: #ffffff;
+}
+.panel-wrapper .panel-title a:active {
+  color: rgba(182, 193, 207, 0.6);
+}
 .panel-wrapper .panel-content {
   width: 100%;
-  position: absolute;
-  top: 65px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #edf0f5;
@@ -278,47 +313,6 @@
 .header .nav > ul > li > .panel-wrapper.show {
   left: 0;
   visibility: visible;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title {
-  position: absolute;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 65px;
-  font-size: inherit;
-  font-weight: inherit;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  color: #b6c1cf;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:link {
-  text-decoration: none;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:visited {
-  text-decoration: none;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:hover {
-  text-decoration: none;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:active {
-  text-decoration: none;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a .icon-close {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -10px;
-  font-size: 24px;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:hover {
-  color: #ffffff;
-}
-.header .nav > ul > li > .panel-wrapper > .panel-title a:active {
-  color: rgba(182, 193, 207, 0.6);
 }
 .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu.accordian-menu > li {
   border-bottom: 1px solid #b6c1cf;
@@ -563,7 +557,9 @@
 .header .search-panel .container .hot-tag {
   margin-left: -5px;
   margin-right: -5px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  max-height: 159px;
+  overflow: hidden;
 }
 .header .search-panel .container .hot-tag [class^="col-"] {
   padding-left: 5px;
@@ -726,6 +722,9 @@
   .header .search-panel {
     top: 64px;
     width: inherit;
+  }
+  .header .search-panel .container .hot-tag {
+    max-height: 159px;
   }
 }
 @media only screen and (min-width: 980px) {

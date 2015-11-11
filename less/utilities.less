@@ -159,24 +159,51 @@
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
+    //bottom: 0;
     width: 100%;
     background-color: @header-child-menu-panel-bg-color;
     overflow: hidden;
     .panel-title{
-        position: absolute;
-        top: 0;
+        position: relative;
+//      top: 0;
         height: 65px;
         color: @ice-blue;
         font-weight: normal;
         font-size: @font-size-large;
         background-color: @blue-gray-dark;
-        text-align: center;    
+        text-align: center; 
+        h3{
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 65px;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+        a{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: block;
+            height: 24px;
+            width: 24px;
+            .clear-link-style;
+            .remove-pointer-event;
+            color: @ice-blue;
+            .icon-close{
+                font-size: @web-icon-normal;
+            }
+            &:hover{
+                color: @white;
+            }
+            &:active{
+                color: @ice-blue-opacity60;
+            }                            
+        }           
     }
     .panel-content{
         width: 100%;
-        position: absolute;
-        top: 65px;
+//      position: absolute;
+//      top: 65px;
         padding-top: 30px;
         padding-bottom: 30px;
         background-color: @header-child-menu-panel-bg-color;

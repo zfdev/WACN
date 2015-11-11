@@ -195,8 +195,8 @@ var App = (function($, AUI, win, doc) {
 		}
 		var nScrollTop;
 		var fInit = function() {
-			nScrollTop = o$win.scrollTop();
-			o$win.on("scroll", function() {
+			nScrollTop = o$win.scrollTop();			
+			o$win.on("scroll", AUI.throttle(function() {
 				var nAfterScrollTop = o$win.scrollTop();
 				var nDelta = nAfterScrollTop - nScrollTop;
 				if (nDelta === 0) {
@@ -204,7 +204,7 @@ var App = (function($, AUI, win, doc) {
 				}
 				fInteraction(nDelta);
 				nScrollTop = nAfterScrollTop;
-			})
+			}))
 		}
 		return {
 			init: fInit

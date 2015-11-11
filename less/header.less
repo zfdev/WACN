@@ -139,33 +139,8 @@
                         visibility: visible;
                     }
                     >.panel-title{
-                        position: absolute;
-                        h3{
-                            margin-top: 0;
-                            margin-bottom: 0;
-                            line-height: 65px;
-                            font-size: inherit;
-                            font-weight: inherit;
-                        }
-                        a{
-                            .clear-link-style;
-                            .remove-pointer-event;
-                            color: @ice-blue;
-                            .icon-close{
-                                display: block;
-                                position: absolute;
-                                right: 20px;
-                                top: 50%;
-                                margin-top: -10px;
-                                font-size: @web-icon-normal;
-                            }
-                            &:hover{
-                                color: @white;
-                            }
-                            &:active{
-                                color: @ice-blue-opacity60;
-                            }                            
-                        }
+                        //position: absolute;
+
                     }
                     >.panel-content{
                         >.sub-menu{
@@ -393,7 +368,9 @@
             .hot-tag{
                 margin-left: -5px;
                 margin-right: -5px;
-                padding-bottom: 20px;
+                margin-bottom: 20px;
+                max-height: 159px;
+                overflow: hidden;
                 [class^="col-"]{
                     padding-left: 5px;
                     padding-right: 5px;   
@@ -596,6 +573,11 @@
         .search-panel{
             top: @header-height-sm;
             width: inherit;
+            .container{
+                .hot-tag{
+                    max-height: 159px;
+                }
+            }
         }  
     }    
 }
