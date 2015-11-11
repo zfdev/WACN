@@ -9,7 +9,6 @@
   .auto-scroll {
     overflow-x: hidden!important;
     overflow-y: auto!important;
-    -webkit-overflow-scrolling: touch;
   }
 }
 .accordian-menu {
