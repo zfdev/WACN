@@ -658,6 +658,18 @@ var App = (function($, AUI, win, doc) {
 		}
 	})();
 
+	//Implement touchend event handlers
+	var oHandleTouchEvent = (function(){
+		var fInit = function(){
+			if(!bIsDesktopMode){
+				FastClick.attach(document.body);
+			}
+		}
+		return{
+			init: fInit
+		}
+	})();
+
 	return {
 		init: function() {
 			oTestScreen.init();
@@ -676,6 +688,7 @@ var App = (function($, AUI, win, doc) {
 			//oSearchHistory.save("历史记录关键词 Search history keywords");
 			oTestScreen.add(oAutoScroll.update);
 			oTestScreen.add(oAutoHeight.update);
+			oHandleTouchEvent.init();
 		}
 	}
 })(jQuery, AUI, window, document);
