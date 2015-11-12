@@ -144,8 +144,8 @@ var App = (function($, AUI, win, doc) {
 
 	//Body Scroll
 	var oBodyScroll = (function() {
-		var o$Body = $(".page");
-		var bScrollAble = true;
+		var o$Body = $("body");
+		//var bScrollAble = true;
 		var fNoScroll = function() {
 			if (!o$Body.hasClass("no-scroll")) {
 				o$Body.addClass("no-scroll");
@@ -158,19 +158,19 @@ var App = (function($, AUI, win, doc) {
 			}
 		}
 		var fInit = function(){
-			o$Doc.on("touchmove", function(e){
-				e.preventDefault();
-			})
-			o$Body.on("touchstart", ".no-scroll", function(e){
-				if(e.currentTarget.scrollTop === 0){
-					e.currentTarget.scrollTop = 1;
-				}else if(e.currentTarget.scrollHeight == e.currentTarget.scrollTop + e.currentTarget.offsetHeight){
-					e.currentTarget.scrollTop -=1;	
-				}
-			});
-			o$Body.on("touchmove", ".no-scroll", function(e){
-				e.stopPropagation();		
-			});				
+//			o$Doc.on("touchmove", function(e){
+//				e.preventDefault();
+//			})
+//			o$Body.on("touchstart", ".no-scroll", function(e){
+//				if(e.currentTarget.scrollTop === 0){
+//					e.currentTarget.scrollTop = 1;
+//				}else if(e.currentTarget.scrollHeight == e.currentTarget.scrollTop + e.currentTarget.offsetHeight){
+//					e.currentTarget.scrollTop -=1;	
+//				}
+//			});
+//			o$Body.on("touchmove", ".no-scroll", function(e){
+//				e.stopPropagation();		
+//			});				
 		}
 		return {
 			noScroll: fNoScroll,
