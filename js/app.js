@@ -56,7 +56,8 @@ var App = (function($, AUI, win, doc) {
 	var oAutoHeight = (function() {
 		var _oConfig = {}
 		var oDafaults = {
-			maxHeight: 500
+			maxHeight: 520,
+			selector: ".auto-height"
 		};
 		var AutoHeight = function(oContainer) {
 			this.o$Container = $(oContainer);
@@ -77,9 +78,9 @@ var App = (function($, AUI, win, doc) {
 			//log(nHeightArr);
 			var nMaxHeight = fGetMaxHeight(nHeightArr);
 			o$AutoHeightContainer.css("height", nMaxHeight);
-//			if(nMaxHeight>600){
-//				o$AutoHeightContainer.css("height", 600);	
-//			}
+			//			if(nMaxHeight>600){
+			//				o$AutoHeightContainer.css("height", 600);	
+			//			}
 			$.each(aChildDomArr, function() {
 				$(this).css("height", nMaxHeight);
 			});
@@ -116,7 +117,12 @@ var App = (function($, AUI, win, doc) {
 		var fGetAllChildDomHeightArr = function(aChildDomArr) {
 			var nHeightArr = [];
 			$.each(aChildDomArr, function() {
-				nHeightArr.push($(this).innerHeight());
+				var nHeight = $(this).innerHeight();
+				if (nHeight >= _oConfig.maxHeight) {
+					nHeight = _oConfig.maxHeight;
+					$(this).addClass("scrollable");
+				}
+				nHeightArr.push(nHeight);
 			});
 			return nHeightArr;
 		}
@@ -130,8 +136,8 @@ var App = (function($, AUI, win, doc) {
 		}
 		var aAutoHeightCon = [];
 		var fInit = function(oConfig) {
-			_oConfig = $.extend({} , oDafaults, oConfig);
-			$(".auto-height").each(function() {
+			_oConfig = $.extend({}, oDafaults, oConfig);
+			$(_oConfig.selector).each(function() {
 				var oAutoHeight = new AutoHeight(this);
 				aAutoHeightCon.push(oAutoHeight);
 			});
@@ -157,20 +163,20 @@ var App = (function($, AUI, win, doc) {
 				o$Body.removeClass("no-scroll");
 			}
 		}
-		var fInit = function(){
-//			o$Doc.on("touchmove", function(e){
-//				e.preventDefault();
-//			})
-//			o$Body.on("touchstart", ".no-scroll", function(e){
-//				if(e.currentTarget.scrollTop === 0){
-//					e.currentTarget.scrollTop = 1;
-//				}else if(e.currentTarget.scrollHeight == e.currentTarget.scrollTop + e.currentTarget.offsetHeight){
-//					e.currentTarget.scrollTop -=1;	
-//				}
-//			});
-//			o$Body.on("touchmove", ".no-scroll", function(e){
-//				e.stopPropagation();		
-//			});				
+		var fInit = function() {
+			//			o$Doc.on("touchmove", function(e){
+			//				e.preventDefault();
+			//			})
+			//			o$Body.on("touchstart", ".no-scroll", function(e){
+			//				if(e.currentTarget.scrollTop === 0){
+			//					e.currentTarget.scrollTop = 1;
+			//				}else if(e.currentTarget.scrollHeight == e.currentTarget.scrollTop + e.currentTarget.offsetHeight){
+			//					e.currentTarget.scrollTop -=1;	
+			//				}
+			//			});
+			//			o$Body.on("touchmove", ".no-scroll", function(e){
+			//				e.stopPropagation();		
+			//			});				
 		}
 		return {
 			noScroll: fNoScroll,
@@ -206,7 +212,7 @@ var App = (function($, AUI, win, doc) {
 		}
 		var nScrollTop;
 		var fInit = function() {
-			nScrollTop = o$win.scrollTop();			
+			nScrollTop = o$win.scrollTop();
 			o$win.on("scroll", AUI.throttle(function() {
 				var nAfterScrollTop = o$win.scrollTop();
 				var nDelta = nAfterScrollTop - nScrollTop;
@@ -243,22 +249,22 @@ var App = (function($, AUI, win, doc) {
 			return false;
 		}
 		var fOpen = function() {
-			if(bIsDesktopMode){
-				$("#searchInput").trigger("focus");	
-			}			
+			if (bIsDesktopMode) {
+				$("#searchInput").trigger("focus");
+			}
 			o$SearchPanel.addClass("show");
-			if(!bIsDesktopMode){
-				o$SearchToggleBtn.removeClass("icon-search").addClass("icon-close");	
-			}			
+			if (!bIsDesktopMode) {
+				o$SearchToggleBtn.removeClass("icon-search").addClass("icon-close");
+			}
 			oBodyScroll.noScroll();
 			_oConfig.openCall && _oConfig.openCall();
 			//log("Search Panel Open", _oConfig.openCall);
 		}
 		var fClose = function() {
 			o$SearchPanel.removeClass("show");
-			if(!bIsDesktopMode){
-				o$SearchToggleBtn.addClass("icon-search").removeClass("icon-close");	
-			}			
+			if (!bIsDesktopMode) {
+				o$SearchToggleBtn.addClass("icon-search").removeClass("icon-close");
+			}
 			oBodyScroll.scroll();
 			_oConfig.closeCall && _oConfig.closeCall();
 		}
@@ -389,8 +395,8 @@ var App = (function($, AUI, win, doc) {
 					requestParam: _oConfig.keywordsCount
 				},
 				dataType: "json"
-			}).done(function(oData){
-				fRender(fRenderData(oData));					
+			}).done(function(oData) {
+				fRender(fRenderData(oData));
 			});
 		}
 		var fInit = function(oConfig) {
@@ -447,7 +453,7 @@ var App = (function($, AUI, win, doc) {
 		}
 
 		var fChildMenuColse = function() {
-			if(!bIsDesktopMode){
+			if (!bIsDesktopMode) {
 				return;
 			}
 			o$AllNavLink.removeClass("active");
@@ -457,22 +463,38 @@ var App = (function($, AUI, win, doc) {
 			return false;
 		}
 
-		var fCountElementDt = function(){
-			o$ChildMenu.find(".menu-child").each(function(){
+		var fCountElementDt = function() {
+			o$ChildMenu.find(".menu-child").each(function() {
 				var o$Dl = $(this);
 				var nDtCount = o$Dl.find("dt").length;
 				//log(nDtCount%2);
-				if(nDtCount%2){
-					o$Dl.addClass("even-child");															
+				if (nDtCount % 2) {
+					o$Dl.addClass("even-child");
 				}
+				fPreventScrollEvent(o$Dl); 				
 			});
 		}
 
-		var fDdHover = function(){
+		var fPreventScrollEvent = function() {
+			o$ChildMenu.find(".menu-child").each(function(){
+				var o$Dl = $(this);
+				o$Dl.on("mousewheel", function(e) {
+					if(!$(this).hasClass("scrollable")){
+						return;	
+					}
+					var oEvent = e.originalEvent,
+						nDelta = oEvent.wheelDelta || -oEvent.detail;
+					this.scrollTop += (nDelta < 0 ? 1 : -1) * 30;
+					e.preventDefault();
+				})				
+			});
+		}
+
+		var fDdHover = function() {
 			$(this).prev("dt").toggleClass("mouse-hover");
 		}
-		
-		var fDdClick = function(){
+
+		var fDdClick = function() {
 			var sJumpUrl = $(this).prev("dt").find("a").attr("href");
 			win.location = sJumpUrl;
 			return false;
@@ -486,6 +508,7 @@ var App = (function($, AUI, win, doc) {
 			o$Doc.on("mouseout", ".nav .panel-content dl dd", fDdHover);
 			o$Doc.on("click", ".nav .panel-content dl dd", fDdClick);
 			fCountElementDt();
+			fPreventScrollEvent();
 		}
 
 		return {
@@ -636,25 +659,25 @@ var App = (function($, AUI, win, doc) {
 		}
 		Tab.prototype._bind = function() {
 			var self = this;
-			self.$tabNavContainer.find('[data-toggle="tab"]').each(function(){
-				if($(this).parent('li').hasClass('active')){
-					show($(this));	
+			self.$tabNavContainer.find('[data-toggle="tab"]').each(function() {
+				if ($(this).parent('li').hasClass('active')) {
+					show($(this));
 				}
 			});
 			self.$tabNavContainer.on('click.tab', '[data-toggle="tab"]', self, activate);
 		}
 		var show = function($tabLink) {
-			var sTargetId= $tabLink.attr("href");
+			var sTargetId = $tabLink.attr("href");
 			var regExp = /^#\S+/g;
-			if(regExp.test(sTargetId)){
+			if (regExp.test(sTargetId)) {
 				$(sTargetId).parents(".tab-content").find(".tab-panel").removeClass("show-md");
 				$(sTargetId).addClass("show-md");
-			}		
+			}
 		}
 		var activate = function(event) {
 			event.data.$tabNavContainer.find('li').removeClass("active");
 			$(this).parent('li').addClass("active");
-			show($(this));		
+			show($(this));
 		}
 
 		var fInit = function(oConfig) {
@@ -670,20 +693,20 @@ var App = (function($, AUI, win, doc) {
 	})();
 
 	//Implement touchend event handlers
-	var oHandleTouchEvent = (function(){
-		var fInit = function(){
-			if(!bIsDesktopMode){
+	var oHandleTouchEvent = (function() {
+		var fInit = function() {
+			if (!bIsDesktopMode) {
 				FastClick.attach(document.body);
 			}
 		}
-		return{
+		return {
 			init: fInit
 		}
 	})();
 
 	return {
 		init: function() {
-			oTestScreen.init();			
+			oTestScreen.init();
 			oHeaderAutoHide.init();
 			oBodyScroll.init();
 			oSearchPanel.init({
