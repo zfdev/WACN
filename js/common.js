@@ -262,9 +262,7 @@ var Common = (function($, AUI, win, doc) {
 		}
 		var fClose = function() {
 			o$SearchPanel.removeClass("show");
-			if (!bIsDesktopMode) {
-				o$SearchToggleBtn.addClass("icon-search").removeClass("icon-close");
-			}
+			o$SearchToggleBtn.addClass("icon-search").removeClass("icon-close");
 			oBodyScroll.scroll();
 			_oConfig.closeCall && _oConfig.closeCall();
 		}
@@ -506,7 +504,7 @@ var Common = (function($, AUI, win, doc) {
 		}
 
 		var fCountElementDt = function() {
-			o$ChildMenu.find(".menu-child").each(function() {
+			o$ChildMenu.find("dl").each(function() {
 				var o$Dl = $(this);
 				var nDtCount = o$Dl.find("dt").length;
 				//log(nDtCount%2);

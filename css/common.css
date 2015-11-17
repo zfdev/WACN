@@ -101,7 +101,7 @@
   text-decoration: none;
 }
 .panel-wrapper .panel-title a .icon-close {
-  font-size: 24px;
+  font-size: 23px;
 }
 .panel-wrapper .panel-title a:hover {
   color: #ffffff;
@@ -222,10 +222,10 @@
   text-decoration: none;
 }
 .header .brand .top-nav .nav-toggle .icon-navigation {
-  font-size: 24px;
+  font-size: 23px;
 }
 .header .brand .top-nav .nav-toggle .icon-close {
-  font-size: 24px;
+  font-size: 23px;
 }
 .header .brand .top-nav .nav-toggle:hover {
   color: #ffffff;
@@ -254,10 +254,10 @@
   text-decoration: none;
 }
 .header .brand .top-nav .search .icon-search {
-  font-size: 24px;
+  font-size: 23px;
 }
 .header .brand .top-nav .search .icon-close {
-  font-size: 24px;
+  font-size: 23px;
 }
 .header .brand .top-nav .search:hover {
   color: #ffffff;
@@ -710,8 +710,8 @@
   }
   .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl {
     overflow: hidden;
-    margin-left: -6px;
-    margin-right: -6px;
+    margin-left: -1px;
+    margin-right: -1px;
   }
   .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl dt {
     width: 50%;
