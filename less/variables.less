@@ -43,6 +43,9 @@
 @screen-md-max: (@screen-md + 1);
 @screen-lg: 1280px;
 
+//Media resource directory
+@media-resource-directory: "../img";
+
 //#Zindex
 @zindex-header: 2000;
 
@@ -58,17 +61,34 @@
 @search-panel-max-height: @auto-height-max;
 @header-height-xs: 87px;
 @header-height-sm: 64px;
+@header-height-md: 100px;
 @text-indent-hide: -9999px;
 
 @child-menu-panel-width-md: 700px;
 @child-menu-panel-height-md: 520px;
 @child-menu-panel-height-md-max: 520px;
-@header-height-md: 100px;
+
 
 @logo-width: 164px;
 @logo-height: 24px;
 @header-breakpoint: 449px;
 
+//##Header Resource
+@logo-azure-url: "@{media-resource-directory}/logo-azure.png";
+@logo-azure-2x-url: "@{media-resource-directory}/logo-azure-2x.png";
+@logo-azure-carrier-url: "@{media-resource-directory}/logo-azure-carrier.png";
+@logo-azure-carrier-2x-url: "@{media-resource-directory}/logo-azure-carrier-2x.png";
+
+//#Content
+
 
 //#Footer
 @footer-menu-child-max-height: 180px;
+
+//##Header Resource
+@footer-logo-azure-url: "@{media-resource-directory}/logo-azure-footer.png";
+@footer-logo-azure-2x-url: "@{media-resource-directory}/logo-azure-footer-2x.png";
+@footer-logo-azure-carrier-url: "@{media-resource-directory}/logo-azure-carrier-footer.png";
+@footer-logo-azure-carrier-2x-url: "@{media-resource-directory}/logo-azure-carrier-footer-2x.png";
+@footer-logo-microsoft-url: "@{media-resource-directory}/logo-microsoft.png";
+@footer-logo-microsoft-2x-url: "@{media-resource-directory}/logo-microsoft-2x.png";

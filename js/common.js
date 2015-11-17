@@ -1,4 +1,4 @@
-var App = (function($, AUI, win, doc) {
+var Common = (function($, AUI, win, doc) {
 	"use strict";
 	var log = AUI.debug.log;
 	//Config
@@ -21,7 +21,7 @@ var App = (function($, AUI, win, doc) {
 	var bIsMobileMode = false;
 	var bIsTabletMode = false;
 	var bIsDesktopMode = false;
-	var o$win = $(win);
+	var o$Win = $(win);
 	var o$Doc = $(doc);
 
 	//View Mode
@@ -42,7 +42,7 @@ var App = (function($, AUI, win, doc) {
 		var fInit = function() {
 			fTestScreen();
 		}
-		o$win.on("resize", function() {
+		o$Win.on("resize", function() {
 			fTestScreen();
 			oCallbacks.fire();
 		})
@@ -198,7 +198,7 @@ var App = (function($, AUI, win, doc) {
 			o$Header.removeClass("hide");
 		}
 		var fInteraction = function(nDelta) {
-			var nWinScrollTop = o$win.scrollTop();
+			var nWinScrollTop = o$Win.scrollTop();
 			if (nDelta > 0) {
 				if (nWinScrollTop >= oConfig.autoHideHeight) {
 					fHideHeader();
@@ -212,9 +212,9 @@ var App = (function($, AUI, win, doc) {
 		}
 		var nScrollTop;
 		var fInit = function() {
-			nScrollTop = o$win.scrollTop();
-			o$win.on("scroll", AUI.throttle(function() {
-				var nAfterScrollTop = o$win.scrollTop();
+			nScrollTop = o$Win.scrollTop();
+			o$Win.on("scroll", AUI.throttle(function() {
+				var nAfterScrollTop = o$Win.scrollTop();
 				var nDelta = nAfterScrollTop - nScrollTop;
 				if (nDelta === 0) {
 					return false;
@@ -285,6 +285,43 @@ var App = (function($, AUI, win, doc) {
 		}
 	})();
 
+	//Global Search
+	var oGlobalSearch = (function() {
+		var _oConfig = {}
+		var defaults = {
+			beforeSearch: null,
+			$input: $("#searchInput"),
+			searchRequestUrl: "/searchresults/?query="
+		}
+		var fIsEmptyString = function(sKeywords) {
+			var rReg = /^\s+$/g;
+			return rReg.test(sKeywords) || sKeywords === "";
+		}
+		var fDoSearch = function() {
+			var sKeywords = _oConfig.$input.val();
+			if (fIsEmptyString(sKeywords)) {
+				return;
+			}
+			var sRedirectUrl = _oConfig.searchRequestUrl + encodeURIComponent(sKeywords);
+			_oConfig.beforeSearch && _oConfig.beforeSearch(sKeywords);
+			win.location = sRedirectUrl;
+		}
+		var fBindEvent = function() {
+			o$Win.on("keyup", function(e) {
+				if (e.keyCode == "13") {
+					fDoSearch();
+				}
+			});
+		}
+		var fInit = function(oConfig) {
+			_oConfig = $.extend({}, defaults, oConfig);
+			fBindEvent();
+		}
+		return {
+			init: fInit
+		}
+	})();
+
 	//Search History 
 	var oSearchHistory = (function() {
 		var SearchHistory = function() {
@@ -312,14 +349,21 @@ var App = (function($, AUI, win, doc) {
 			var aKeywords = this._fGetLocalKeywords();
 			$.each(aKeywords, function() {
 				sAllKeywordsTemplate += AUI.Template(self.template, {
-					url: (self.config.searchRequestUrl + this),
+					url: (self.config.searchRequestUrl + encodeURIComponent(this)),
 					keyword: this
 				});
 			})
 			this.config.$container.empty();
 			this.config.$container.append(sAllKeywordsTemplate);
 		}
+		SearchHistory.prototype._find = function(sKeyword) {
+			var aKeywords = this._fGetLocalKeywords();
+			return $.inArray(sKeyword, aKeywords);
+		}
 		SearchHistory.prototype.save = function(sKeyword) {
+			if (!(this._find(sKeyword) == -1)) {
+				return;
+			}
 			var aKeywords = this._fGetLocalKeywords();
 			if (aKeywords.length < this.config.keywordCountLimit) {
 				aKeywords.unshift(sKeyword);
@@ -364,7 +408,7 @@ var App = (function($, AUI, win, doc) {
 		var _oConfig = {};
 		var oDefaults = {
 			$container: $(".search-panel .hot-tag"),
-			requestUrl: "http://wacnstaging.chinacloudsites.cn/hotkeywords",
+			requestUrl: "/hotkeywords",
 			requestParam: "topK",
 			keywordsCount: 9,
 			searchUrl: "/searchresults/?query=",
@@ -374,7 +418,7 @@ var App = (function($, AUI, win, doc) {
 			var sHotKeywordsDom = "";
 			$.each(oData, function() {
 				var sKeyword = this;
-				var sUrl = _oConfig.searchUrl + sKeyword;
+				var sUrl = _oConfig.searchUrl + encodeURIComponent(sKeyword);
 				sHotKeywordsDom += AUI.Template(_oConfig.template, {
 					url: sUrl,
 					keyword: sKeyword
@@ -387,13 +431,12 @@ var App = (function($, AUI, win, doc) {
 			_oConfig.$container.append(sDom);
 		}
 		var fGetData = function() {
-			var requestParam = _oConfig.requestParam;
+			var oRequestParam = {}
+			oRequestParam[_oConfig.requestParam] = _oConfig.keywordsCount
 			$.ajax({
 				url: _oConfig.requestUrl,
 				method: "POST",
-				data: {
-					requestParam: _oConfig.keywordsCount
-				},
+				data: oRequestParam,
 				dataType: "json"
 			}).done(function(oData) {
 				fRender(fRenderData(oData));
@@ -438,18 +481,17 @@ var App = (function($, AUI, win, doc) {
 		}
 		var fToggleChildMenu = function() {
 			//log(this);
-			if ($(this).next(".panel-wrapper").length == 0) {
+			if (!$(this).next(".panel-wrapper").length == 0) {
+				o$AllNavLink.removeClass("active");
+				$(this).addClass("active");
+				//			if(bIsDesktopMode){
+				//					
+				//			}
+				o$ChildMenu.removeClass("show");
+				$(this).next(".panel-wrapper").addClass("show");
+				oBodyScroll.noScroll();
 				return false;
 			}
-			o$AllNavLink.removeClass("active");
-			$(this).addClass("active");
-			//			if(bIsDesktopMode){
-			//					
-			//			}
-			o$ChildMenu.removeClass("show");
-			$(this).next(".panel-wrapper").addClass("show");
-			oBodyScroll.noScroll();
-			return false;
 		}
 
 		var fChildMenuColse = function() {
@@ -469,24 +511,24 @@ var App = (function($, AUI, win, doc) {
 				var nDtCount = o$Dl.find("dt").length;
 				//log(nDtCount%2);
 				if (nDtCount % 2) {
-					o$Dl.addClass("even-child");
+					o$Dl.addClass("odd-child");
 				}
-				fPreventScrollEvent(o$Dl); 				
+				fPreventScrollEvent(o$Dl);
 			});
 		}
 
 		var fPreventScrollEvent = function() {
-			o$ChildMenu.find(".menu-child").each(function(){
+			o$ChildMenu.find(".menu-child").each(function() {
 				var o$Dl = $(this);
 				o$Dl.on("mousewheel", function(e) {
-					if(!$(this).hasClass("scrollable")){
-						return;	
+					if (!$(this).hasClass("scrollable")) {
+						return;
 					}
 					var oEvent = e.originalEvent,
 						nDelta = oEvent.wheelDelta || -oEvent.detail;
 					this.scrollTop += (nDelta < 0 ? 1 : -1) * 30;
 					e.preventDefault();
-				})				
+				})
 			});
 		}
 
@@ -696,7 +738,7 @@ var App = (function($, AUI, win, doc) {
 	var oHandleTouchEvent = (function() {
 		var fInit = function() {
 			if (!bIsDesktopMode) {
-				FastClick.attach(document.body);
+				FastClick.attach(doc.body);
 			}
 		}
 		return {
@@ -719,8 +761,12 @@ var App = (function($, AUI, win, doc) {
 			oAutoHeight.init();
 			oSearchHistory.init();
 			oTopSearchKeywords.init();
+			oGlobalSearch.init({
+				beforeSearch: function(sKeyword) {
+					oSearchHistory.save(sKeyword);
+				}
+			});
 			oTab.init();
-			//oSearchHistory.save("历史记录关键词 Search history keywords");
 			oTestScreen.add(oAutoScroll.update);
 			oTestScreen.add(oAutoHeight.update);
 			oHandleTouchEvent.init();
@@ -729,5 +775,5 @@ var App = (function($, AUI, win, doc) {
 })(jQuery, AUI, window, document);
 
 $(function() {
-	App.init();
+	Common.init();
 });

@@ -723,10 +723,10 @@
   .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl dt:nth-last-of-type(2) a {
     border-bottom: 1px solid rgba(182, 193, 207, 0.6);
   }
-  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.even-child dt:nth-last-of-type(3) {
+  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.odd-child dt:nth-last-of-type(3) {
     border-bottom: 1px solid rgba(182, 193, 207, 0.6);
   }
-  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.even-child dt:nth-last-of-type(1) a {
+  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.odd-child dt:nth-last-of-type(1) a {
     border-top: none;
   }
   .header .search-panel {
@@ -739,6 +739,7 @@
 }
 @media only screen and (min-width: 980px) {
   .header {
+    position: relative;
     height: 100px;
   }
   .header .container {
@@ -995,12 +996,12 @@
   .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl > dd.divide-line {
     border-bottom: 1px solid #cccccc;
   }
-  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.even-child dt:nth-last-of-type(3) {
+  .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li > dl.odd-child dt:nth-last-of-type(3) {
     border-bottom: none;
   }
   .header .nav > ul > li > .panel-wrapper > .panel-content > .sub-menu > li .gradient-mask {
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     left: 200px;
     width: 480px;
     height: 70px;
@@ -1113,6 +1114,11 @@
   background-color: rgba(239, 19, 50, 0.3);
   border: 1px solid rgba(239, 19, 50, 0.1);
 }
+@media only screen and (min-width: 449px) {
+  .content {
+    margin-top: 64px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .content {
     margin-top: 64px;
@@ -1120,7 +1126,7 @@
 }
 @media only screen and (min-width: 980px) {
   .content {
-    margin-top: 100px;
+    margin-top: 0;
   }
 }
 .footer {

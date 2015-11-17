@@ -26,7 +26,7 @@
                     text-indent: @text-indent-hide;
                     width: @logo-width;
                     height: @logo-height;
-                    .img-retina("../img/logo-azure.png","../img/logo-azure-2x.png", @logo-width, @logo-height);                   
+                    .img-retina(@logo-azure-url,@logo-azure-2x-url, @logo-width, @logo-height);            
                 }
             }
             .azure-carrier{
@@ -42,7 +42,7 @@
                     margin-left: 6px;
                     margin-right: 6px;
                     background-repeat: no-repeat;
-                    .img-retina("../img/logo-azure-carrier.png","../img/logo-azure-carrier-2x.png",71px,12px);                    
+                    .img-retina(@logo-azure-carrier-url,@logo-azure-carrier-2x-url,71px,12px);                    
                 }
                 span{
                     float: left;
@@ -557,7 +557,7 @@
                                                 }
                                             }
                                         }
-                                        &.even-child{
+                                        &.odd-child{
                                             dt{
                                                 &:nth-last-of-type(3){
                                                     border-bottom: 1px solid @border-color-dividing-line;        
@@ -592,6 +592,7 @@
 //##Desktop screen
 @media @desktop-screen{
     .header{
+        position: relative;
         height: @header-height-md;
         .container{
             position: relative;
@@ -800,7 +801,7 @@
                                                 //display: block;
                                                 opacity: 1;
                                                 z-index: inherit;
-                                                max-height: @child-menu-panel-height-md-max; 
+                                                max-height: @child-menu-panel-height-md-max;
                                                 &.scrollable{
                                                     overflow-y: auto;                                                   
                                                 }    
@@ -869,7 +870,7 @@
                                                 border-bottom: 1px solid @border-color-gray;    
                                             }
                                         }
-                                        &.even-child{
+                                        &.odd-child{
                                             dt{
                                                 &:nth-last-of-type(3){
                                                     border-bottom: none;
@@ -879,7 +880,7 @@
                                     }
                                     .gradient-mask{
                                         position: absolute;
-                                        bottom: 0;
+                                        bottom: 1px;
                                         left: 200px;                                       
                                         width: 480px;
                                         height: 70px;

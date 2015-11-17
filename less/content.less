@@ -1,6 +1,6 @@
 //#Content
 .content{
-    margin-top: 87px;
+    margin-top: @header-height-xs;
     .container{
        .do-animation; 
     }     
@@ -33,15 +33,22 @@
         border: 1px solid rgba(239, 19, 50, .1);
     }
 }
+
+@media @header-logo-breakpoint-query{
+    .content{
+        margin-top: @header-height-sm;
+    }
+}
+
 //##Tablet screen
 @media @tablet-screen{
     .content{
-        margin-top: 64px;
+        margin-top: @header-height-sm;
     }            
 }
 //##Desktop screen
 @media @desktop-screen{
     .content{
-        margin-top: 100px;
+        margin-top: 0;
     }             
 }
