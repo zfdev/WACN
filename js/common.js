@@ -330,7 +330,7 @@ var Common = (function($, AUI, win, doc) {
 				$clearButton: $(".search-history .clear-btn"),
 				searchRequestUrl: "/searchresults/?query="
 			}
-			this.template = '<li><a href="<%=url%>" title="<%=keyword%>"><%=keyword%></a></li>';
+			this.template = '<li><a class="text-limit" href="<%=url%>" title="<%=keyword%>"><%=keyword%></a></li>';
 		}
 		SearchHistory.prototype.init = function(oConfig) {
 			this.config = $.extend({}, this.defaults, oConfig);

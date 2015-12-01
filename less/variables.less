@@ -7,6 +7,7 @@
 @ice-blue-opacity60: fade(@ice-blue, 60%);
 @blue-gray-light: #5e6d81;
 @palette-gray-dark: #89919c;
+@orange: #e66102;
 
 //##Border Color
 @border-color-gray: #CCC;
@@ -18,7 +19,7 @@
 @ui-section-gray-light: #edf0f5;
 
 //##Form
-@input-color-placeholder: @blue-gray-dark;
+@input-color-placeholder: @ice-blue;
 
 //#Font Size
 //##Global
@@ -33,6 +34,7 @@
 //##Web Font Size
 @web-icon-small: 18px;
 @web-icon-normal: 23px;
+@web-icon-large: 32px;
 @web-icon-size-: ;
 
 //#Media queries breakpoints
@@ -44,7 +46,7 @@
 @screen-lg: 1280px;
 
 //Media resource directory
-@media-resource-directory: "../img";
+@media-resource-directory: "../images";
 
 //#Zindex
 @zindex-header: 2000;
@@ -57,7 +59,7 @@
 @header-child-navigation-bg-color: #404b59;
 @header-child-menu-panel-bg-color: @ui-section-gray-light;
 
-@navigation-menu-min-height: 406px;
+@navigation-menu-min-height: @auto-height-max;
 @search-panel-max-height: @auto-height-max;
 @header-height-xs: 87px;
 @header-height-sm: 64px;

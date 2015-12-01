@@ -385,23 +385,32 @@ ul {
 .icon {
   vertical-align: middle;
 }
+.icon-arrow-right-thin:before {
+  content: "\e907";
+}
+.icon-arrow-right:before {
+  content: "\e906";
+}
+.icon-activity:before {
+  content: "\e903";
+}
+.icon-volume:before {
+  content: "\e904";
+}
+.icon-xiaoice:before {
+  content: "\e905";
+}
+.icon-weixin:before {
+  content: "\e902";
+}
 .icon-navigation:before {
   content: "\e901";
 }
 .icon-close:before {
   content: "\e900";
 }
-.icon-volume:before {
-  content: "\e804";
-}
 .icon-triangle:before {
   content: "\e807";
-}
-.icon-activity:before {
-  content: "\e802";
-}
-.icon-xiaoice:before {
-  content: "\e803";
 }
 .icon-sinaweibo:before {
   content: "\e805";

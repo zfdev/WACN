@@ -37,7 +37,7 @@
                             a{
                                 color: @white;
                                 display: block;
-                                .clear-link-style;
+                                
                                 font-size: @base-font-size;
                                 line-height: 22px;
                                 vertical-align: middle;
@@ -79,7 +79,7 @@
                 a{
                     color: @white;
                     line-height: 24px;      
-                    .clear-link-style;
+                   
                     display: block;
                     float: left; 
                     &:hover{
@@ -128,17 +128,42 @@
     }
             
 }
+//##Only aviliable on mobiel screen.
+@media @mobile-devices-screen{
+    .footer{
+        .footer-navigation{
+            >.container{
+                >ul
+                {
+                    >li{
+                        >ul{
+                            &.show-xs{
+                                //margin-bottom: 0;
+                            }                        
+                            &.show-sm{
+                                //margin-bottom: 0;
+                            }
+                        }          
+                    }           
+                }            
+            }    
+        }       
+    }   
+}
+
 //##Desktop screen
 @media @desktop-screen{
     .footer{
         .footer-navigation{
             >.container{
+                padding-bottom: 10px;
                 >ul{
                     >li{
                         width: 25%;
                         float: left;
                         border-bottom: none;
                         .footer-title{
+                            line-height: 44px;
                             .icon-arrow-top{
                                 display: none;
                             }
@@ -147,7 +172,7 @@
                             }
                         }
                         >ul{
-                            margin-bottom: 15px;
+                            margin-bottom: 0;
                             max-height: inherit;
                         }
                     }

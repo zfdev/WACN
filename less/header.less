@@ -60,7 +60,7 @@
             .nav-toggle{
                 display: block;
                 float: left;
-                .clear-link-style;
+                
                 color: @ice-blue;
                 .remove-pointer-event;
                 .icon-navigation{     
@@ -81,7 +81,7 @@
                 display: block;
                 float: left;
                 margin-right: 20px;
-                .clear-link-style;
+                
                 color: @ice-blue;
                 .remove-pointer-event;                
                 .icon-search{     
@@ -120,7 +120,7 @@
                     display: block;
                     height: 45px;
                     line-height: 45px;
-                    .clear-link-style;
+                    
                     font-size: @base-font-size;
                     color: @ice-blue;
                     border-bottom: 4px solid transparent;
@@ -146,13 +146,13 @@
                         >.sub-menu{
                             &.accordian-menu{
                                 >li{
-                                    border-bottom: 1px solid @border-color-dark-background;
+                                    border-bottom: 1px solid @border-color-gray;
                                     &:last-child{
                                         border-bottom: none;
                                     }
                                     &:first-child{
                                         &.single-link{
-                                            border-bottom: none;    
+                                            //border-bottom: none;    
                                         }                                       
                                     }                                                                        
                                     >a{
@@ -179,7 +179,7 @@
                                     height: 32px;
                                     line-height: 32px;
                                     text-indent: 20px;
-                                    .clear-link-style;
+                                    
                                     .remove-pointer-event;
                                     &.no-child{
                                         height: 40px;
@@ -214,7 +214,7 @@
                                             //border-bottom: 1px solid @border-color-dark-background;                                         
                                             display: block;
                                             color: @blue-gray-dark;
-                                            .clear-link-style;
+                                            
                                             .remove-pointer-event;
                                             &:hover{
                                                 color: @ui-section-blue;
@@ -260,24 +260,65 @@
             margin-right: -20px;
             padding-left: 20px;
             padding-right: 20px;
-            line-height: 45px;
-            font-size: @base-font-size;
-            .clear-link-style;
+            padding-top: 10px;
+            line-height: 35px;
+            font-size: @font-size-small;
+            
             vertical-align: middle;
             border-top: 1px solid #303c4a;
             color: @ice-blue;
             background-color: @header-child-navigation-bg-color;
-            .icon-portal{
-                font-size: @font-size-large;
-                display: block;
-                margin-right: 5px; 
-                float: left;
-                height: 45px;
-                line-height: 45px;
-            }
+//          .icon-portal{
+//              font-size: @font-size-large;
+//              display: block;
+//              margin-right: 5px; 
+//              float: left;
+//              height: 45px;
+//              line-height: 45px;
+//          }
             &:hover{
                 color: @white;
             }                 
+        }
+        .apply-trial{
+            display: block;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 35px;
+            font-size: @font-size-small;           
+            vertical-align: middle;
+            color: @ice-blue;
+            background-color: @header-child-navigation-bg-color;
+            &:hover{
+                color: @white;
+            }                 
+        }
+        .buy-it{
+            display: block;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            line-height: 50px;
+            font-size: 20px;
+            vertical-align: middle;
+            color: @orange;
+            background-color: @header-child-navigation-bg-color;
+            span{
+                vertical-align: middle;
+            }
+            .icon{
+                display: inline-block;
+                margin-top: 2px;
+                margin-left: -5px;
+                font-size: 30px;       
+            }
+            &:hover{
+                //color: @white;
+            }           
         }
         &.show{
             max-height: @navigation-menu-min-height;
@@ -305,7 +346,7 @@
                     border-radius: 5px;
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    padding-left: 10px;
+                    padding-left: 8px;
                     padding-right: 10px;
                     overflow: hidden;
                     height: 42px;
@@ -323,7 +364,9 @@
                         color: @ice-blue;
                         font-size: @base-font-size;
                         line-height: 22px;
-                        text-indent: 40px; 
+                        //text-indent: 36px; 
+                        padding-right: 10px;
+                        padding-left: 36px;
                         &:focus{
                             color: @blue-gray-dark;
                             outline: 0;
@@ -386,13 +429,13 @@
                     line-height: 20px; 
                     &:hover{
                         color: @ui-section-blue;
-                        background-color: rgba(255, 255, 255, .6);
+                        //background-color: rgba(255, 255, 255, .6);
                         //opacity: .6;
                         //border: 1px solid @white;
                     }
                     &:active{
                         color: @ui-section-blue;
-                        background-color: rgba(255, 255, 255, .6);
+                        //background-color: rgba(255, 255, 255, .6);
                     }        
                 }
             }
@@ -411,8 +454,9 @@
                             padding-right: 20px;
                             color: @blue-gray-dark;
                             background-color: @white;
-                            .clear-link-style;
-                            border-top: 1px solid @border-color-dark-background;   
+                            
+                            border-top: 1px solid @border-color-dividing-line;
+                            white-space: nowrap; 
                             &:hover{
                                 color: @ui-section-blue;
                             }
@@ -424,8 +468,8 @@
                 }
                 .clear-btn{
                     color: @palette-gray-dark;
-                    border-top: 1px solid @border-color-dark-background;
-                    border-bottom: 1px solid @border-color-dark-background;  
+                    border-top: 1px solid @border-color-dividing-line;
+                    border-bottom: 1px solid @border-color-dividing-line;  
                     line-height: 75px;
                     background-color: @white;
                     &:hover{
@@ -527,8 +571,11 @@
                             >.sub-menu{
                                 >li{
                                     &.single-link{
-                                        width: 50%;
-                                        padding-right: 5px;    
+                                        //width: 50%;
+                                        //padding-right: 5px;
+                                        a{
+                                            width: 50%;
+                                        }    
                                     }
                                     list-style: none;
                                     >a{
@@ -625,9 +672,9 @@
                 .search{
                     display: block;
                     float: left;
-                    margin-right: 70px;
+                    margin-right: 160px;
                     line-height: 24px;
-                    .clear-link-style;
+                    
                     color: @ice-blue;
                     &:hover{
                         color: @white;
@@ -765,6 +812,7 @@
                                             color: @ice-blue;
                                             background-color: inherit;
                                             border: none;
+                                            width: auto;
                                         } 
                                     }
                                     >a{
@@ -895,25 +943,56 @@
             }
             .portal-link{
                 position: absolute;
+                right: 100px;
+                top: 26px;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 15px;
+                padding-right: 0;
+                padding-top: 0;
+                font-size: 12px;
+                background-color: inherit;
+                line-height: 16px;
+                border-top: 0;
+                border-left: 1px solid @ice-blue;
+            }
+            .apply-trial{
+                position: absolute;
                 right: 20px;
-                top: 21px;
+                top: 26px;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 15px;
+                padding-right: 0;
+                font-size: 12px;
+                background-color: inherit;
+                line-height: 16px;
+                border-top: 0;
+                border-left: 1px solid @ice-blue;
+            } 
+            .buy-it{
+                position: absolute;
+                right: 12px;
+                top: 60px;
                 margin-left: 0;
                 margin-right: 0;
                 padding-left: 0;
                 padding-right: 0;
+                font-size: 20px;
                 background-color: inherit;
-                line-height: 24px;
+                line-height: 20px;
                 border-top: 0;
-                .icon-portal{
+                .icon{
                     line-height: 24px;
                     height: 24px;
+                    //font-size: 20px;
                 }
-            }  
+            } 
         }
         .search-panel{
             background-color: transparent;
             top: 20px;
-            right: 105px;
+            right: 195px;
             width: 0;
             overflow: hidden;
             .do-animation;
@@ -927,7 +1006,7 @@
                     padding-top: 0;
                     padding-bottom: 0;
                     .input-wrapper{
-                        padding-left: 6px;
+                        padding-left: 8px;
                         padding-right: 6px;
                         height: 28px;
                         padding-top: 0;
@@ -943,10 +1022,11 @@
                         }
                         .text-input{
                             top: 2px;
-                            left: 28px;
+                            left: 0;
                             height: 22px;
                             text-indent: 0;
-                            width: 160px;      
+                            width: 200px;  
+                            padding-left: 30px;    
                         }   
                     }           
                 }                 
