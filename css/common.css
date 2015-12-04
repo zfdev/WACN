@@ -151,6 +151,10 @@ a:active {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.header ul {
+  margin: 0;
+  padding: 0;
+}
 .header .container {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1052,6 +1056,9 @@ a:active {
     border: 1px solid transparent;
     background-color: #ffffff;
   }
+  .header.transparent-bg {
+    background-color: transparent;
+  }
 }
 .content {
   margin-top: 87px;
@@ -1060,33 +1067,6 @@ a:active {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-.content .content-blog {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  color: #5e6d81;
-}
-.content .content-blog h1 {
-  font-size: 32px;
-  font-weight: normal;
-}
-.content .content-blog h2 {
-  font-size: 20px;
-  font-weight: normal;
-}
-.content .content-blog p {
-  font-size: 14px;
-}
-.content .content-blog .grid-demo {
-  margin-bottom: 15px;
-}
-.content [class^=col-] {
-  color: #333;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgba(239, 19, 50, 0.3);
-  border: 1px solid rgba(239, 19, 50, 0.1);
 }
 @media only screen and (min-width: 449px) {
   .content {
@@ -1106,6 +1086,10 @@ a:active {
 .footer {
   background-color: #323a45;
   padding-top: 20px;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
 }
 .footer .footer-navigation > .container > ul {
   overflow: hidden;

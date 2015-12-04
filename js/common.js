@@ -500,7 +500,7 @@ var Common = (function($, AUI, win, doc) {
 			o$ChildMenu.removeClass("show");
 			fNavigationClose();
 			oBodyScroll.scroll();
-			return false;
+			//return false;
 		}
 
 		var fCountElementDt = function() {
