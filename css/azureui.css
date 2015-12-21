@@ -650,4 +650,7 @@ th {
     display: none !important;
   }
 }
+.hidden-all {
+  display: none !important;
+}
 /*# sourceMappingURL=azureui.css.map */

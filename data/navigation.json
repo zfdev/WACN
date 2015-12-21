@@ -1,0 +1,810 @@
+[{
+	"No": "1",
+	"Level-1": "首页",
+	"Level-2": "首页",
+	"Level-3": "n/a",
+	"URL Path": "/",
+	"URL": "http://www.windowsazure.cn/",
+	"Note": ""
+}, {
+	"No": "2",
+	"Level-1": "产品",
+	"Level-2": "认识Azure",
+	"Level-3": "n/a",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/what-is-windows-azure/",
+	"Note": ""
+}, {
+	"No": "3",
+	"Level-1": "",
+	"Level-2": "计算",
+	"Level-3": "虚拟机",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/virtual-machines/",
+	"Note": ""
+}, {
+	"No": "4",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "网站",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/web-site/",
+	"Note": ""
+}, {
+	"No": "5",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "云服务",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/cloud-services/",
+	"Note": ""
+}, {
+	"No": "6",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "移动服务",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/mobile-services/",
+	"Note": ""
+}, {
+	"No": "7",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "批处理（Batch）",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/batch/",
+	"Note": ""
+}, {
+	"No": "8",
+	"Level-1": "",
+	"Level-2": "数据服务",
+	"Level-3": "存储",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/storage/",
+	"Note": ""
+}, {
+	"No": "9",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "SQL 数据库",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/sql-database/",
+	"Note": ""
+}, {
+	"No": "10",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "HDInsight",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/hdinsight/",
+	"Note": ""
+}, {
+	"No": "11",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "备份",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/back-up/",
+	"Note": ""
+}, {
+	"No": "12",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "站点恢复",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/site-recovery/",
+	"Note": ""
+}, {
+	"No": "13",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "MySQL 数据库",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/mysql/",
+	"Note": ""
+}, {
+	"No": "14",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Redis 缓存",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/redis-cache/",
+	"Note": ""
+}, {
+	"No": "15",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "流分析",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/stream-analytics/",
+	"Note": ""
+}, {
+	"No": "16",
+	"Level-1": "",
+	"Level-2": "应用服务",
+	"Level-3": "服务总线",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/messaging/",
+	"Note": ""
+}, {
+	"No": "17",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Active Directory",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/identity/",
+	"Note": ""
+}, {
+	"No": "18",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "计划程序",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/scheduler/",
+	"Note": ""
+}, {
+	"No": "19",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "CDN",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/cdn/",
+	"Note": ""
+}, {
+	"No": "20",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "媒体服务",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/media-services/",
+	"Note": ""
+}, {
+	"No": "21",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "通知中心",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/notification-hubs/",
+	"Note": ""
+}, {
+	"No": "22",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "事件中心",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/event-hubs/",
+	"Note": ""
+}, {
+	"No": "23",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "自动化",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/automation/",
+	"Note": ""
+}, {
+	"No": "24",
+	"Level-1": "",
+	"Level-2": "网络服务",
+	"Level-3": "虚拟网络",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/networking/",
+	"Note": ""
+}, {
+	"No": "25",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "流量管理器",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/traffic-manager/",
+	"Note": ""
+}, {
+	"No": "26",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "应用程序网关",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/application-gateway/",
+	"Note": ""
+}, {
+	"No": "27",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "ExpressRoute",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/expressroute/",
+	"Note": ""
+}, {
+	"No": "28",
+	"Level-1": "",
+	"Level-2": "前沿技术",
+	"Level-3": "牛津计划",
+	"URL Path": "/home/ProjectOxford/",
+	"URL": "Http://www.windowsazure.cn/home/projectoxford/",
+	"Note": "TBC, no need to implement for now"
+}, {
+	"No": "29",
+	"Level-1": "价格",
+	"Level-2": "价格",
+	"Level-3": "n/a",
+	"URL Path": "/pricing/",
+	"URL": "http://www.windowsazure.cn/pricing/overview/",
+	"Note": ""
+}, {
+	"No": "30",
+	"Level-1": "解决方案",
+	"Level-2": "应用解决方案",
+	"Level-3": "云端游戏开发",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/game/",
+	"Note": ""
+}, {
+	"No": "31",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "云端移动开发",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/mobile/",
+	"Note": ""
+}, {
+	"No": "32",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "广告数字营销",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/advertising/",
+	"Note": ""
+}, {
+	"No": "33",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "在线数字营销",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/online/",
+	"Note": ""
+}, {
+	"No": "34",
+	"Level-1": "",
+	"Level-2": "通用解决方案",
+	"Level-3": "基础解决服务",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/infrastructure/",
+	"Note": ""
+}, {
+	"No": "35",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "数据管理",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/data-management/",
+	"Note": ""
+}, {
+	"No": "36",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Web 应用程序",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/web/",
+	"Note": ""
+}, {
+	"No": "37",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "开发与测试",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/dev-test/",
+	"Note": ""
+}, {
+	"No": "38",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "存储、备份和恢复",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/storage-backup-recovery/",
+	"Note": ""
+}, {
+	"No": "39",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "开源软件",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/OSS/",
+	"Note": ""
+}, {
+	"No": "40",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Storsimple",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/solutions/storsimple/",
+	"Note": ""
+}, {
+	"No": "41",
+	"Level-1": "案例与伙伴",
+	"Level-2": "案例研究",
+	"Level-3": "n/a",
+	"URL Path": "/partnerancasestudy/",
+	"URL": "http://www.windowsazure.cn/partnerancasestudy/case-studies/",
+	"Note": ""
+}, {
+	"No": "42",
+	"Level-1": "",
+	"Level-2": "合作伙伴",
+	"Level-3": "n/a",
+	"URL Path": "/partnerancasestudy/",
+	"URL": "http://www.windowsazure.cn/partnerancasestudy/partner/",
+	"Note": ""
+}, {
+	"No": "43",
+	"Level-1": "",
+	"Level-2": "ISV 招募计划",
+	"Level-3": "n/a",
+	"URL Path": "/isv-plan/",
+	"URL": "http://www.windowsazure.cn/isv-plan/",
+	"Note": ""
+}, {
+	"No": "44",
+	"Level-1": "文档与资源",
+	"Level-2": "文档概览",
+	"Level-3": "入门指南",
+	"URL Path": "/starter-guide/",
+	"URL": "http://www.windowsazure.cn/starter-guide/",
+	"Note": ""
+}, {
+	"No": "45",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "视频中心",
+	"URL Path": "/video-center/",
+	"URL": "http://www.windowsazure.cn/video-center/",
+	"Note": ""
+}, {
+	"No": "46",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "创建运行Windows的虚拟机",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/virtual-machines-windows-tutorial-classic-portal/",
+	"Note": "URL is changed (from Ibiza portal content to classic portal content)"
+}, {
+	"No": "47",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "创建运行Linux的虚拟机",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/virtual-machines-linux-tutorial/",
+	"Note": ""
+}, {
+	"No": "48",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "创建ASP.NET Web应用",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/web-sites-dotnet-get-started/",
+	"Note": ""
+}, {
+	"No": "49",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "创建 Node.js 网站并部署到 Azure",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/web-sites-nodejs-develop-deploy-mac/",
+	"Note": ""
+}, {
+	"No": "50",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "创建iOS移动后端",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/mobile-services-ios-get-started/",
+	"Note": ""
+}, {
+	"No": "51",
+	"Level-1": "",
+	"Level-2": "计算",
+	"Level-3": "虚拟机",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/virtual-machines/",
+	"Note": ""
+}, {
+	"No": "52",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "网站",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/web-sites/",
+	"Note": ""
+}, {
+	"No": "53",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "云服务",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/cloud-services/",
+	"Note": ""
+}, {
+	"No": "54",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "移动服务",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/mobile-services/",
+	"Note": ""
+}, {
+	"No": "55",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "批处理（Batch）",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/batch/",
+	"Note": ""
+}, {
+	"No": "56",
+	"Level-1": "",
+	"Level-2": "数据服务",
+	"Level-3": "存储",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/storage/",
+	"Note": ""
+}, {
+	"No": "57",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "SQL 数据库",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/sql-databases/",
+	"Note": ""
+}, {
+	"No": "58",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "HDInsight",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/hdinsight/",
+	"Note": ""
+}, {
+	"No": "59",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "备份",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/backup/",
+	"Note": ""
+}, {
+	"No": "60",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "站点恢复",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/site-recovery/",
+	"Note": ""
+}, {
+	"No": "61",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "MySQL 数据库",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/mysql/",
+	"Note": ""
+}, {
+	"No": "62",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Redis 缓存",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/redis-cache/",
+	"Note": ""
+}, {
+	"No": "63",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "流分析",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/stream-analytics/",
+	"Note": ""
+}, {
+	"No": "64",
+	"Level-1": "",
+	"Level-2": "应用服务",
+	"Level-3": "服务总线",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/service-bus/",
+	"Note": ""
+}, {
+	"No": "65",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Active Directory",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/identity/",
+	"Note": ""
+}, {
+	"No": "66",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "计划程序",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/scheduler/",
+	"Note": ""
+}, {
+	"No": "67",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "CDN",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/cdn/",
+	"Note": ""
+}, {
+	"No": "68",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "媒体服务",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/media-services/",
+	"Note": ""
+}, {
+	"No": "69",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "通知中心",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/notification-hubs/",
+	"Note": ""
+}, {
+	"No": "70",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "事件中心",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/event-hubs/",
+	"Note": ""
+}, {
+	"No": "71",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "自动化",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/automation/",
+	"Note": ""
+}, {
+	"No": "72",
+	"Level-1": "",
+	"Level-2": "网络服务",
+	"Level-3": "虚拟网络",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/networking/",
+	"Note": ""
+}, {
+	"No": "73",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "流量管理器",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/traffic-manager/",
+	"Note": ""
+}, {
+	"No": "74",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "应用程序网关",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/application-gateway/",
+	"Note": ""
+}, {
+	"No": "75",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "ExpressRoute",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/services/expressroute/",
+	"Note": ""
+}, {
+	"No": "76",
+	"Level-1": "",
+	"Level-2": "开发文档",
+	"Level-3": "架构指南",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/architecture-overview/",
+	"Note": ""
+}, {
+	"No": "77",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "开发说明",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/documentation/articles/developerdifferences/",
+	"Note": ""
+}, {
+	"No": "78",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "开源软件",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/other/open-source-software/",
+	"Note": ""
+}, {
+	"No": "79",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": ".Net",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/net/",
+	"Note": ""
+}, {
+	"No": "80",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Java",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/java/",
+	"Note": ""
+}, {
+	"No": "81",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Node.js",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/nodejs/",
+	"Note": ""
+}, {
+	"No": "82",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Python",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/python/",
+	"Note": ""
+}, {
+	"No": "83",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Ruby",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/ruby/",
+	"Note": ""
+}, {
+	"No": "84",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "PHP",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/php/",
+	"Note": ""
+}, {
+	"No": "85",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Media",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/media-services/",
+	"Note": ""
+}, {
+	"No": "86",
+	"Level-1": "",
+	"Level-2": "",
+	"Level-3": "Ios,Android Windows",
+	"URL Path": "/develop/",
+	"URL": "http://www.windowsazure.cn/develop/mobile/ios/",
+	"Note": ""
+}, {
+	"No": "87",
+	"Level-1": "",
+	"Level-2": "工具下载",
+	"Level-3": "n/a",
+	"URL Path": "/downloads/",
+	"URL": "http://www.windowsazure.cn/downloads/",
+	"Note": ""
+}, {
+	"No": "88",
+	"Level-1": "",
+	"Level-2": "故障排除",
+	"Level-3": "n/a",
+	"URL Path": "/troubleshoot/",
+	"URL": "http://www.windowsazure.cn/troubleshoot/",
+	"Note": "Add /troubleshoot/ under root, need to confirm content readiness by 12/4"
+}, {
+	"No": "89",
+	"Level-1": "云社区",
+	"Level-2": "技术博客",
+	"Level-3": "n/a",
+	"URL Path": "/blog/",
+	"URL": "http://www.windowsazure.cn/blog/",
+	"Note": ""
+}, {
+	"No": "90",
+	"Level-1": "",
+	"Level-2": "时事报道",
+	"Level-3": "n/a",
+	"URL Path": "/community/",
+	"URL": "http://www.windowsazure.cn/community/news/",
+	"Note": "Add /news under /community/, need to confirm content readiness by 12/4"
+}, {
+	"No": "91",
+	"Level-1": "",
+	"Level-2": "技术论道",
+	"Level-3": "n/a",
+	"URL Path": "/community/",
+	"URL": "http://www.windowsazure.cn/community/techtalk/",
+	"Note": "Add /techtalk under /community/, need to confirm content readiness by 12/4"
+}, {
+	"No": "92",
+	"Level-1": "",
+	"Level-2": "云杂谈",
+	"Level-3": "n/a",
+	"URL Path": "/community/",
+	"URL": "http://www.windowsazure.cn/community/cloudworld/",
+	"Note": "Add /cloudworld under /community/, need to confirm content readiness by 12/4"
+}, {
+	"No": "93",
+	"Level-1": "支持",
+	"Level-2": "联系我们",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/contact/",
+	"Note": ""
+}, {
+	"No": "94",
+	"Level-1": "",
+	"Level-2": "支持计划",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/plans/",
+	"Note": ""
+}, {
+	"No": "95",
+	"Level-1": "",
+	"Level-2": "服务仪表盘",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/service-dashboard/",
+	"Note": ""
+}, {
+	"No": "96",
+	"Level-1": "",
+	"Level-2": "信任与法律",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/trust-center/",
+	"Note": ""
+}, {
+	"No": "97",
+	"Level-1": "",
+	"Level-2": "ICP 备案",
+	"Level-3": "n/a",
+	"URL Path": "/icp/",
+	"URL": "http://www.windowsazure.cn/icp",
+	"Note": ""
+}, {
+	"No": "98",
+	"Level-1": "",
+	"Level-2": "常见问题",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/faq/",
+	"Note": ""
+}, {
+	"No": "99",
+	"Section": "Top-Action",
+	"Level-1": "我要试用",
+	"Level-2": "我要试用",
+	"Level-3": "n/a",
+	"URL Path": "/pricing/",
+	"URL": "http://www.windowsazure.cn/pricing/1rmb-trial/",
+	"Note": ""
+}, {
+	"No": "100",
+	"Level-1": "我要购买",
+	"Level-2": "我要购买",
+	"Level-3": "n/a",
+	"URL Path": "/pricing/",
+	"URL": "http://www.windowsazure.cn/pricing/pia/",
+	"Note": ""
+}, {
+	"No": "101",
+	"Level-1": "获取入门指南",
+	"Level-2": "获取入门指南",
+	"Level-3": "n/a",
+	"URL Path": "/starter-guide/",
+	"URL": "http://www.windowsazure.cn/starter-guide/",
+	"Note": ""
+}

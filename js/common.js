@@ -16,13 +16,28 @@ var Common = (function($, AUI, win, doc) {
 				desktop: 981,
 				large: 1281
 			}
-		}
+		},
+		AJAXRequestPrefix: 'api-'
 	}
 	var bIsMobileMode = false;
 	var bIsTabletMode = false;
 	var bIsDesktopMode = false;
 	var o$Win = $(win);
 	var o$Doc = $(doc);
+
+	//Pub/sub model implementation
+	(function($){
+		var oPubSub = $({});
+		$.subscribe = function(){
+			oPubSub.on.apply(oPubSub, arguments);
+		}
+		$.unsubscribe = function(){
+			oPubSub.off.apply(oPubSub, arguments);	
+		}
+		$.publish = function(){
+			oPubSub.trigger.apply(oPubSub, arguments);
+		}		
+	})($);
 
 	//View Mode
 	var oTestScreen = (function() {
@@ -198,6 +213,9 @@ var Common = (function($, AUI, win, doc) {
 			o$Header.removeClass("hide");
 		}
 		var fInteraction = function(nDelta) {
+			if(bIsDesktopMode){
+				return;
+			}
 			var nWinScrollTop = o$Win.scrollTop();
 			if (nDelta > 0) {
 				if (nWinScrollTop >= oConfig.autoHideHeight) {
@@ -406,7 +424,7 @@ var Common = (function($, AUI, win, doc) {
 		var _oConfig = {};
 		var oDefaults = {
 			$container: $(".search-panel .hot-tag"),
-			requestUrl: "/hotkeywords",
+			requestUrl: "/" + oConfig.AJAXRequestPrefix + "hotkeywords",
 			requestParam: "topK",
 			keywordsCount: 9,
 			searchUrl: "/searchresults/?query=",
@@ -540,6 +558,37 @@ var Common = (function($, AUI, win, doc) {
 			return false;
 		}
 
+		var fGetCurrentCategoryByURL = function(){
+			var sCurrentPageUrl = win.location.href;
+			var oURLCategoryMap = {
+				'/home/features/': 'product',
+				'/pricing/': 'price',
+				'/solutions/': 'solutions',
+				'/partnerancasestudy/': 'partnerAndCase',
+				'/isv-plan/': 'partnerAndCase',		
+				'/starter-guide/': 'document',
+				'/video-center/': 'document',
+				'/documentation/': 'document',
+				'/develop/': 'document',
+				'/blog/': 'community',
+				'/community/': 'community',
+				'/support/': 'support',
+				'/icp/': 'support'
+			}
+			var fSelectCategory = function(){
+				for(var i in oURLCategoryMap){
+					if(sCurrentPageUrl.indexOf(i) > -1){
+						return oURLCategoryMap[i];	
+					}		
+				}
+			}
+			if(fSelectCategory()){
+				o$Nav.find('.nav-' + fSelectCategory()).addClass('current');
+			}else{
+				o$Nav.find('.nav-index').addClass('current');	
+			}
+		}
+
 		var fInit = function() {
 			o$Doc.on("click", ".nav-toggle", fToggleNavigation);
 			o$Doc.on("click", ".nav > ul > li > a", fToggleChildMenu);
@@ -549,8 +598,9 @@ var Common = (function($, AUI, win, doc) {
 			o$Doc.on("click", ".nav .panel-content dl dd", fDdClick);
 			fCountElementDt();
 			fPreventScrollEvent();
+			fGetCurrentCategoryByURL();
 		}
-
+		
 		return {
 			hide: fNavigationHide,
 			open: fNavigationOpen,
@@ -695,16 +745,19 @@ var Common = (function($, AUI, win, doc) {
 			this.$tabNavContainer = $tabNavContainer;
 		}
 		Tab.prototype.init = function() {
+			this.eventHandler = this.$tabNavContainer.data('event') || 'click';
 			this._bind();
 		}
 		Tab.prototype._bind = function() {
 			var self = this;
+			var oEventType = self.eventHandler + '.tab';
 			self.$tabNavContainer.find('[data-toggle="tab"]').each(function() {
 				if ($(this).parent('li').hasClass('active')) {
 					show($(this));
 				}
 			});
-			self.$tabNavContainer.on('click.tab', '[data-toggle="tab"]', self, activate);
+			self.$tabNavContainer.on(oEventType, '[data-toggle="tab"]', self, activate);
+			self.$tabNavContainer.on('touchend', '[data-toggle="tab"]', self, activate);
 		}
 		var show = function($tabLink) {
 			var sTargetId = $tabLink.attr("href");
@@ -728,6 +781,71 @@ var Common = (function($, AUI, win, doc) {
 			});
 		}
 		return {
+			init: fInit
+		}
+	})();
+
+	//Dialog
+	var oDialog = (function(){
+		var Dialog = function(){
+			this.width = 0;
+			this.height = 0;	
+		}
+		Dialog.prototype.init = function(o$link){
+			//get dom
+			var sDialogIdSelector = o$link.attr('href');
+			//log(sDialogIdSelector);
+			this.$link = o$link;
+			this.$dialog = $(sDialogIdSelector);
+			this.$dialogContent = this.$dialog.find('.dialog-content');
+			this.$closeBtn = this.$dialog.find('.dialog-header .close-btn');
+			this.$mask = this.$dialog.find('.dialog-mask');
+			//load config for dialog
+			this.width = this.$dialog.data('width');
+			this.height = this.$dialog.data('height');
+			this._bind(); //bind event
+			this.update();			
+		}
+		Dialog.prototype.open = function(){
+			this.$dialog.addClass('open');
+			//return false;
+		}
+		Dialog.prototype.update = function(){
+			this.$dialogContent.width(this.width);
+			this.$dialogContent.height(this.height);
+			this.$dialogContent.css('margin-left', -this.width/2);
+			this.$dialogContent.css('margin-top', -this.height/2);
+		}
+		Dialog.prototype._bind = function(){
+			var self = this;
+			this.$link.off('click.Dialog');
+			this.$link.on('click.Dialog.link', function(e){
+				self.open();
+				e.preventDefault();
+				e.stopPropagation();
+			});
+			this.$closeBtn.on('click.Dialog.closeBtn', function(e){
+				self.close();				
+				e.preventDefault();
+				e.stopPropagation();
+			});
+			this.$mask.on('click.Dialog.mask', function(){
+				self.close();
+			});
+
+		}
+		Dialog.prototype.close = function(){
+			this.$dialog.removeClass('open');
+			//log('Dialog.close');	
+		}
+		var fInit = function(){
+			$('[data-toggle="dialog"]').each(function(){
+				var oDialogInstance = new Dialog();
+				oDialogInstance.init($(this));
+				//log(oDialogInstance);
+			});
+		}
+		return{
 			init: fInit
 		}
 	})();
@@ -765,6 +883,7 @@ var Common = (function($, AUI, win, doc) {
 				}
 			});
 			oTab.init();
+			oDialog.init();
 			oTestScreen.add(oAutoScroll.update);
 			oTestScreen.add(oAutoHeight.update);
 			oHandleTouchEvent.init();

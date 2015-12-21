@@ -1,0 +1,115 @@
+{
+	"allLinkIds": [
+		{
+			"云微博": {
+				"href": "//e.weibo.com/mscloudcomputing/",
+				"id": "footer-weibo-id"
+			}
+		}, {
+			"最新公告": {
+				"href": "/what-is-new/",
+				"id": "footer-news-id"
+			}
+		}, {
+			"活动": {
+				"href": "/community/events/",
+				"id": "footer-event-id"
+			}
+		}, {
+			"Windows Azure": {
+				"href": "/zh-cn/",
+				"id": "footer-azure-id"
+			}
+		}, {
+			"解决方案": {
+				"href": "/zh-cn/solutions/",
+				"id": "footer-solutions-id"
+			}
+		}, {
+			"服务": {
+				"href": "/home/features/virtual-machines/",
+				"id": "footer-service-id"
+			}
+		}, {
+			"价格": {
+				"href": "/zh-cn/pricing/overview/",
+				"id": "footer-price-id"
+			}
+		}, {
+			"案例库": {
+				"href": "/zh-cn/partnerancasestudy/case-studies/",
+				"id": "footer-casestudy-id"
+			}
+		}, {
+			"技术文档": {
+				"href": "/zh-cn/documentation/",
+				"id": "footer-documentation-id"
+			}
+		}, {
+			"工具下载": {
+				"href": "/zh-cn/downloads/?sdk=net",
+				"id": "footer-download-id"
+			}
+		}, {
+			"支持": {
+				"href": "/zh-cn/support/contact/",
+				"id": "footer-support-id"
+			}
+		}, {
+			"联系我们": {
+				"href": "/zh-cn/support/contact/",
+				"id": "footer-contact-id"
+			}
+		}, {
+			"支持计划": {
+				"href": "/zh-cn/support/plans/",
+				"id": "footer-plans-id"
+			}
+		}, {
+			"服务仪表盘": {
+				"href": "/zh-cn/support/service-dashboard/",
+				"id": "footer-service-dashboard-id"
+			}
+		}, {
+			"法律": {
+				"href": "/zh-cn/support/legal/",
+				"id": "footer-legal-id"
+			}
+		}, {
+			"常见问题": {
+				"href": "/zh-cn/support/faq/",
+				"id": "footer-support-faq-id"
+			}
+		}, {
+			"信任中心": {
+				"href": "/zh-cn/support/trust-center/",
+				"id": "footer-trust-center-id"
+			}
+		}, {
+			"隐私": {
+				"href": "/zh-cn/support/trust-center/privacy/",
+				"id": "footer-privacy-id"
+			}
+		}, {
+			"安全性": {
+				"href": "/zh-cn/support/trust-center/security/",
+				"id": "footer-security-id"
+			}
+		}, {
+			"常见问题": {
+				"href": "/zh-cn/support/trust-center/faq/",
+				"id": "footer-trust-center-faq-id"
+			}
+		}, {
+			"反馈渠道": {
+				"href": "/product-feedback",
+				"id": "feedbackfooter"
+			}
+		}, {
+			"评价与反馈": {
+				"href": "/product-feedback",
+				"id": "pdfdfooter"
+			}
+		}
+	]
+}

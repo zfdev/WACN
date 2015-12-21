@@ -1,0 +1,550 @@
+{
+	"allLinkIds": [
+		{
+			"": {
+				"href": "/",
+				"id": "navigation-azure-logo-id"
+			}
+		}, {
+			"": {
+				"href": "//www.21vbluecloud.com/",
+				"id": "navigation-21v-logo-id"
+			}
+		}, {
+			"我的账户": {
+				"href": "//account.windowsazure.cn/",
+				"id": "header-account-id"
+			}
+		}, {
+			"门户": {
+				"href": "https://manage.windowsazure.cn",
+				"id": "header-portal-logo-id"
+			}
+		}, {
+			"首页": {
+				"href": "/",
+				"id": "nav_homepage"
+			}
+		}, {
+			"服务": {
+				"href": "#",
+				"id": "nav_service"
+			}
+		}, {
+			"虚拟机": {
+				"href": "/home/features/virtual-machines/",
+				"id": "nav_service_vm"
+			}
+		}, {
+			"网站": {
+				"href": "/home/features/web-site/",
+				"id": "nav_service_website"
+			}
+		}, {
+			"云服务": {
+				"href": "/home/features/cloud-services/",
+				"id": "nav_service_cloud"
+			}
+		}, {
+			"移动服务预览": {
+				"href": "/home/features/mobile-services/",
+				"id": "nav_service_mobile"
+			}
+		}, {
+			"批处理(Batch)预览": {
+				"href": "/home/features/batch/",
+				"id": "nav_service_batch"
+			}
+		}, {
+			"存储": {
+				"href": "/home/features/storage/",
+				"id": "nav_service_storage"
+			}
+		}, {
+			"SQL 数据库": {
+				"href": "/home/features/sql-database/",
+				"id": "nav_service_database"
+			}
+		}, {
+			"HDInsight": {
+				"href": "/home/features/hdinsight/",
+				"id": "nav_service_hdinsight"
+			}
+		}, {
+			"备份": {
+				"href": "/home/features/back-up/",
+				"id": "nav_service_backup"
+			}
+		}, {
+			"站点恢复": {
+				"href": "/home/features/site-recovery/",
+				"id": "home_service_site"
+			}
+		}, {
+			"MySQL Database on Azure新": {
+				"href": "/home/features/mysql/",
+				"id": "nav_service_mysql"
+			}
+		}, {
+			"Redis 缓存预览": {
+				"href": "/home/features/redis-cache/",
+				"id": "home_service_redis-cache"
+			}
+		}, {
+			"流分析": {
+				"href": "/home/features/stream-analytics/",
+				"id": "home_service_stream-analytics"
+			}
+		}, {
+			"服务总线": {
+				"href": "/home/features/messaging/",
+				"id": "nav_service_service-bus"
+			}
+		}, {
+			"Active Directory": {
+				"href": "/home/features/identity/",
+				"id": "nav_service_ad"
+			}
+		}, {
+			"计划程序": {
+				"href": "/home/features/scheduler/",
+				"id": "nav_service_scheduler"
+			}
+		}, {
+			"CDN": {
+				"href": "/home/features/cdn/",
+				"id": "nav_service_cdn"
+			}
+		}, {
+			"媒体服务": {
+				"href": "/home/features/media-services/",
+				"id": "nav_service_media"
+			}
+		}, {
+			"通知中心": {
+				"href": "/home/features/notification-hubs/",
+				"id": "nav_service_notification-hun"
+			}
+		}, {
+			"事件中心": {
+				"href": "/home/features/event-hubs/",
+				"id": "nav_service_eve"
+			}
+		}, {
+			"自动化": {
+				"href": "/home/features/automation/",
+				"id": "nav_service_automation"
+			}
+		}, {
+			"虚拟网络": {
+				"href": "/home/features/networking/",
+				"id": "nav_service_network"
+			}
+		}, {
+			"流量管理器": {
+				"href": "/home/features/traffic-manager/",
+				"id": "nav_service_traffic-manager"
+			}
+		}, {
+			"应用程序网关": {
+				"href": "/home/features/application-gateway/",
+				"id": "nav_service_application-gateway"
+			}
+		}, {
+			"ExpressRoute": {
+				"href": "/home/features/expressroute/",
+				"id": "nav_service_express-route"
+			}
+		}, {
+			"价格": {
+				"href": "/pricing/overview/",
+				"id": "nav_price"
+			}
+		}, {
+			"解决方案": {
+				"href": "#",
+				"id": "nav_solution"
+			}
+		}, {
+			"云端游戏开发": {
+				"href": "/solutions/game/",
+				"id": "nav_solution_game"
+			}
+		}, {
+			"云端移动开发": {
+				"href": "/solutions/mobile/",
+				"id": "nav_solution_mobile"
+			}
+		}, {
+			"广告数字营销": {
+				"href": "/solutions/advertising/",
+				"id": "nav_solution_ads"
+			}
+		}, {
+			"在线数字营销": {
+				"href": "/solutions/online/",
+				"id": "nav_solution_online"
+			}
+		}, {
+			"基础结构服务": {
+				"href": "/solutions/infrastructure/",
+				"id": "nav_solution_infrastructure"
+			}
+		}, {
+			"数据管理": {
+				"href": "/solutions/data-management/",
+				"id": "nav_solution_data-management"
+			}
+		}, {
+			"Web 应用程序": {
+				"href": "/solutions/web/",
+				"id": "nav_solution_web"
+			}
+		}, {
+			"开发和测试": {
+				"href": "/solutions/dev-test/",
+				"id": "nav_solution_dev-test"
+			}
+		}, {
+			"存储、备份和恢复": {
+				"href": "/solutions/storage-backup-recovery/",
+				"id": "nav_solution_backup"
+			}
+		}, {
+			"开源软件": {
+				"href": "/solutions/OSS/",
+				"id": "nav_solution_oss"
+			}
+		}, {
+			"StorSimple": {
+				"href": "/solutions/storsimple/",
+				"id": "nav_solution_storsimple"
+			}
+		}, {
+			"案例与伙伴": {
+				"href": "#",
+				"id": "nav_case-and-partner"
+			}
+		}, {
+			"案例研究": {
+				"href": "/partnerancasestudy/case-studies/",
+				"id": "nav_case-and-partner_case"
+			}
+		}, {
+			"合作伙伴": {
+				"href": "/partnerancasestudy/partner/",
+				"id": "nav_case-and-partner_partner"
+			}
+		}, {
+			"ISV 招募计划": {
+				"href": "/isv-plan/",
+				"id": "nav_case-and-partner_isv_plan"
+			}
+		}, {
+			"文档与资源": {
+				"href": "#",
+				"id": "nav_documentation"
+			}
+		}, {
+			"文档概览": {
+				"href": "/documentation/",
+				"id": "nav_documentation_overview"
+			}
+		}, {
+			"入门指南": {
+				"href": "/starter-guide/",
+				"id": "nav_documentation_guide"
+			}
+		}, {
+			"视频中心": {
+				"href": "/video-center/",
+				"id": "nav_documentation_video_center"
+			}
+		}, {
+			"创建运行Windows的虚拟机": {
+				"href": "/documentation/articles/virtual-machines-windows-tutorial-classic-portal/",
+				"id": "nav_documentation_run_windows"
+			}
+		}, {
+			"创建运行Linux的虚拟机": {
+				"href": "/documentation/articles/virtual-machines-linux-tutorial/",
+				"id": "nav_documentation_run_linux"
+			}
+		}, {
+			"创建一个ASP.NET Web应用": {
+				"href": "/documentation/articles/web-sites-dotnet-get-started/",
+				"id": "nav_documentation_asp"
+			}
+		}, {
+			"创建 Node.js 网站并部署到 Azure": {
+				"href": "/documentation/articles/web-sites-nodejs-develop-deploy-mac/",
+				"id": "nav_documentation_nodejs"
+			}
+		}, {
+			"创建iOS移动后端": {
+				"href": "/documentation/articles/mobile-services-ios-get-started/",
+				"id": "nav_documentation_ios"
+			}
+		}, {
+			"服务文档": {
+				"href": "#",
+				"id": "nav_documentation_service"
+			}
+		}, {
+			"虚拟机": {
+				"href": "/manage/windows/",
+				"id": "nav_documentation_windows"
+			}
+		}, {
+			"网站": {
+				"href": "/manage/services/web-sites/",
+				"id": "nav_documentation_website"
+			}
+		}, {
+			"云服务": {
+				"href": "/manage/services/cloud-services/",
+				"id": "nav_documentation_cloud"
+			}
+		}, {
+			"移动服务": {
+				"href": "/manage/services/mobile-services/",
+				"id": "nav_documentation_mobile"
+			}
+		}, {
+			"批处理（Batch）": {
+				"href": "/documentation/services/batch/",
+				"id": "nav_documentation_batch"
+			}
+		}, {
+			"存储": {
+				"href": "/manage/services/storage/",
+				"id": "nav_documentation_storage"
+			}
+		}, {
+			"SQL 数据库": {
+				"href": "/manage/services/sql-databases/",
+				"id": "nav_documentation_database"
+			}
+		}, {
+			"HDInsight": {
+				"href": "/manage/services/hdinsight/",
+				"id": "nav_documentation_hdinsight"
+			}
+		}, {
+			"备份": {
+				"href": "/manage/services/backup/",
+				"id": "nav_documentation_backup"
+			}
+		}, {
+			"站点恢复": {
+				"href": "/documentation/services/site-recovery/",
+				"id": "nav_documentation_site-recovery"
+			}
+		}, {
+			"MySQL Databaseon Azure": {
+				"href": "/documentation/services/mysql/",
+				"id": "nav_documentation_mysql"
+			}
+		}, {
+			"Redis 缓存": {
+				"href": "/documentation/services/redis-cache/",
+				"id": "nav_documentation_redis-cache"
+			}
+		}, {
+			"流分析": {
+				"href": "/documentation/services/stream-analytics/",
+				"id": "nav_documentation_stream-analytics"
+			}
+		}, {
+			"服务总线": {
+				"href": "/manage/services/service-bus/",
+				"id": "nav_documentation_service-bus"
+			}
+		}, {
+			"Active Directory": {
+				"href": "/manage/services/identity/",
+				"id": "nav_documentation_ad"
+			}
+		}, {
+			"计划程序": {
+				"href": "/services/scheduler/",
+				"id": "nav_documentation_scheduler"
+			}
+		}, {
+			"CDN": {
+				"href": "/manage/services/cdn/",
+				"id": "nav_documentation_cdn"
+			}
+		}, {
+			"媒体服务": {
+				"href": "/documentation/services/media-services/",
+				"id": "nav_documentation_media"
+			}
+		}, {
+			"通知中心": {
+				"href": "/manage/services/notification-hubs/",
+				"id": "nav_documentation_notification-hubs"
+			}
+		}, {
+			"事件中心": {
+				"href": "/documentation/services/event-hubs/",
+				"id": "event-hubs"
+			}
+		}, {
+			"自动化": {
+				"href": "/documentation/services/automation",
+				"id": "nav_documentation_automation"
+			}
+		}, {
+			"虚拟网络": {
+				"href": "/manage/services/networking/",
+				"id": "nav_documentation_network"
+			}
+		}, {
+			"流量管理器": {
+				"href": "/manage/services/networking/traffic-manager/",
+				"id": "nav_documentation_traffic-manager"
+			}
+		}, {
+			"应用程序网关": {
+				"href": "/documentation/services/application-gateway",
+				"id": "nav_documentation_application-gateway"
+			}
+		}, {
+			"ExpressRoute": {
+				"href": "/documentation/services/expressroute",
+				"id": "nav_documentation_express-route"
+			}
+		}, {
+			"开发文档": {
+				"href": "#",
+				"id": "nav_documentation_develop"
+			}
+		}, {
+			"架构指南": {
+				"href": "/documentation/articles/architecture-overview/",
+				"id": "nav_documentation_architecture"
+			}
+		}, {
+			"开发说明": {
+				"href": "/develop/other/developerdifferences/",
+				"id": "nav_documentation_dev-turorial"
+			}
+		}, {
+			"开源软件": {
+				"href": "/develop/other/open-source-software/",
+				"id": "nav_documentation_oss"
+			}
+		}, {
+			".Net": {
+				"href": "/develop/net/",
+				"id": "nav_documentation_net"
+			}
+		}, {
+			"Java": {
+				"href": "/develop/java/",
+				"id": "nav_documentation_java"
+			}
+		}, {
+			"Node.js": {
+				"href": "/develop/nodejs/",
+				"id": "nav_documentation_nodejs"
+			}
+		}, {
+			"Python": {
+				"href": "/develop/python/",
+				"id": "nav_documentation_python"
+			}
+		}, {
+			"Ruby": {
+				"href": "/develop/ruby/",
+				"id": "nav_documentation_python"
+			}
+		}, {
+			"PHP": {
+				"href": "/develop/php/",
+				"id": "nav_documentation_python"
+			}
+		}, {
+			"Media": {
+				"href": "/develop/media-services/",
+				"id": "nav_documentation_python"
+			}
+		}, {
+			"iOS,Android,Windows": {
+				"href": "/develop/mobile/ios/",
+				"id": "nav_documentation_python"
+			}
+		}, {
+			"工具下载": {
+				"href": "/downloads/",
+				"id": "nav_documentation_download"
+			}
+		}, {
+			"博客": {
+				"href": "/blog/",
+				"id": "nav_blog"
+			}
+		}, {
+			"支持": {
+				"href": "#",
+				"id": "nav_support"
+			}
+		}, {
+			"联系我们": {
+				"href": "/support/contact/",
+				"id": "nav_support_contact"
+			}
+		}, {
+			"论坛支持": {
+				"href": "/support/forums/",
+				"id": "nav_support_forums"
+			}
+		}, {
+			"支持计划": {
+				"href": "/support/plans/",
+				"id": "nav_support_plans"
+			}
+		}, {
+			"服务仪表盘": {
+				"href": "/support/service-dashboard/",
+				"id": "nav_support_service-dashboard"
+			}
+		}, {
+			"信任中心": {
+				"href": "/support/trust-center/",
+				"id": "nav_support_trust"
+			}
+		}, {
+			"法律": {
+				"href": "/support/legal/",
+				"id": "nav_support_legal"
+			}
+		}, {
+			"ICP备案中心": {
+				"href": "/icp",
+				"id": "nav_documentation_icp"
+			}
+		}, {
+			"常见问题": {
+				"href": "/support/faq/",
+				"id": "nav_support_faq"
+			}
+		}, {
+			"获取入门指南": {
+				"href": "/starter-guide/",
+				"id": "homepage-top-starter-guide"
+			}
+		}, {
+			"我要购买": {
+				"href": "/pricing/pia/",
+				"id": "homepage-top-pia"
+			}
+		}, {
+			"我要试用": {
+				"href": "/pricing/1rmb-trial/",
+				"id": "homepage-top-1rmb"
+			}
+		}
+	]
+}

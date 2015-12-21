@@ -11,10 +11,10 @@
 		<title>Windows Azure - Azure 微软云</title>
 
 		<!-- BEGIN: Azure UI Style -->
-		<link href="css/azureui.min.css" rel="stylesheet">
+		<link href="css/azureui.css" rel="stylesheet">
 		<!-- END: Azure UI Style -->
 		<!-- BEGIN: Page Style -->
-		<link href="css/common.min.css" rel="stylesheet">
+		<link href="css/common.css" rel="stylesheet">
 		<!-- END: Page Style -->
 	</head>
 
@@ -44,9 +44,9 @@
 				</div>
 				<nav class="nav auto-scroll" data-top="header">
 					<ul>
-						<li class="current"><a id="nav_homepage" href="/" title="首页"><span>首页</span></a></li>
-						<li>
-							<a href="#" title="产品"><span>产品</span></a>
+						<li class="nav-index"><a id="nav_homepage" href="/" title="首页"><span>首页</span></a></li>
+						<li class="nav-product">
+							<a id="nav_service" href="#" title="产品"><span>产品</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
 									<h3>产品</h3>
@@ -55,9 +55,9 @@
 									</a>
 								</div>
 								<div class="panel-content auto-scroll auto-height" data-fullscreen="true" data-top="65" data-child=".sub-menu|.menu-child">
-									<ul class="accordian-menu sub-menu tab-nav tab-content">
+									<ul class="accordian-menu sub-menu tab-nav tab-content" data-event="mouseenter">
 										<li class="single-link">
-											<a class="no-child" href="#" title="认识Azure">认识 Azure</a>
+											<a id="nav_product_what-is-windows-azure" class="no-child" href="/home/features/what-is-windows-azure/" title="认识Azure">认识 Azure</a>
 										</li>
 										<li class="active">
 											<a class="menu-title expand" href="#service_tab1" title="计算" data-toggle="tab">计算<i class="icon icon-arrow-top"></i></a>
@@ -70,7 +70,7 @@
 												<dd>创建可灵活扩展的高可用性应用程序和 API</dd>
 												<dt><a id="nav_service_mobile" href="/home/features/mobile-services/" title="移动服务">移动服务</a></dt>
 												<dd>为任何移动应用提供可缩放并且安全的后端</dd>
-												<dt><a href="#" title="批处理（Batch）">批处理（Batch）</a></dt>
+												<dt><a id="nav_product_batch" href="/home/features/batch/" title="批处理（Batch）">批处理（Batch）</a></dt>
 												<dd>运行大规模的并行批处理计算作业</dd>
 											</dl>
 										</li>
@@ -87,11 +87,11 @@
 												<dd>可靠、低成本且可扩展的将本地数据备份到云平台的解决方案</dd>
 												<dt><a id="home_service_site" href="/home/features/site-recovery/" title="站点恢复">站点恢复</a></dt>
 												<dd>协调在辅助位置自动复制和恢复私有云，保护重要应用程序</dd>
-												<dt><a id="nav_service_mysql" href="/home/features/mysql/" title="MySQL数据库">MySQL 数据库</a></dt>
+												<dt><a id="nav_service_mysql" href="/home/features/mysql/" title="MySQL Database on Azure ">MySQL Database on Azure </a></dt>
 												<dd>MySQL 关系型数据库服务，提供性能稳定、操作简单、高安全性的数据库平台</dd>
 												<dt><a id="home_service_redis-cache" href="/home/features/redis-cache/" title="Redis 缓存">Redis 缓存</a></dt>
 												<dd>高吞吐量、低延迟数据访问，助力应用程序的快速扩展</dd>
-												<dt><a href="/home/features/redis-cache/" title="流分析">流分析</a></dt>
+												<dt><a id="nav_product_stream-analytics" href="/home/features/stream-analytics/" title="流分析">流分析</a></dt>
 												<dd>云中的一种事件处理引擎，可实时快速开发，对现有数据属性进行深入了解</dd>
 											</dl>
 										</li>
@@ -104,7 +104,7 @@
 												<dd>全面且高度可用的云端身份认证和应用访问管理方案</dd>
 												<dt><a id="nav_service_scheduler" href="/home/features/scheduler/" title="计划程序">计划程序</a></dt>
 												<dd>在云平台中创建可靠的对 Azure 内部和外部服务的调度</dd>
-												<dt><a id="nav_service_cdn" href="/home/features/caching/" title="CDN">CDN</a></dt>
+												<dt><a id="nav_service_cdn" href="/home/features/cdn/" title="CDN">CDN</a></dt>
 												<dd>在全球任何位置都可提供优质的内容交付网络体验</dd>
 												<dt><a id="nav_service_media" href="/home/features/media-services/" title="媒体服务">媒体服务</a></dt>
 												<dd>创建端到端的媒体工作流，提供灵活、高度可缩放的编码、打包和分发服务</dd>
@@ -123,21 +123,28 @@
 												<dd>云端的虚拟专属网络，可通过站点到站点的 VPN 轻松扩展本地网络</dd>
 												<dt><a id="nav_service_traffic-manager" href="/home/features/traffic-manager/" title="流量管理器">流量管理器</a></dt>
 												<dd>为传入流量进行跨地域路由，改善应用程序的性能和可用性</dd>
-												<dt><a href="#" title="应用程序网关">应用程序网关</a></dt>
+												<dt><a id="nav_service_application-gateway" href="/home/features/application-gateway/" title="应用程序网关">应用程序网关</a></dt>
 												<dd>通过提供 HTTP 负载平衡和交付控制创建高度可扩展，高可用的网站</dd>
-												<dt><a href="#" title="ExpressRoute">ExpressRoute</a></dt>
+												<dt><a id="nav_service_express-route" href="/home/features/expressroute/" title="ExpressRoute">ExpressRoute</a></dt>
 												<dd>提供与 Windows Azure 的快速、可靠的连接</dd>
+											</dl>
+										</li>
+										<li class="hidden-lg hidden-md hidden-sm hidden-xs">
+											<a class="menu-title expand" href="#service_tab5" title="前沿技术" data-toggle="tab">前沿技术<i class="icon icon-arrow-top"></i></a>
+											<dl class="menu-child tab-panel" id="service_tab5">
+												<dt><a id="nav_product_project-oxford" href="/home/projectoxford/" title="牛津计划">牛津计划</a></dt>
+												<dd>了解微软牛津计划，试用最新智能API</dd>
 											</dl>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li>
+						<li class="nav-price">
 							<a id="nav_price" href="/pricing/overview/" title="价格"><span>价格</span></a>
 						</li>
-						<li>
-							<a href="#" title="解决方案"><span>解决方案</span></a>
+						<li class="nav-solutions">
+							<a id="nav_solution" href="#" title="解决方案"><span>解决方案</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
 									<h3>解决方案</h3>
@@ -146,48 +153,47 @@
 									</a>
 								</div>
 								<div class="panel-content auto-scroll auto-height" data-fullscreen="true" data-top="65" data-child=".sub-menu|.menu-child">
-									<ul class="accordian-menu sub-menu tab-nav tab-content">
+									<ul class="accordian-menu sub-menu tab-nav tab-content" data-event="mouseenter">
 										<li class="active">
 											<a class="menu-title expand" href="#solution_tab1" title="应用解决方案" data-toggle="tab">应用解决方案<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="solution_tab1">
-												<dt><a href="/solutions/game/" title="云端游戏开发">云端游戏开发</a></dt>
+												<dt><a id="nav_solution_game" href="/solutions/game/" title="云端游戏开发">云端游戏开发</a></dt>
 												<dd>提供稳定、多场景、全球范围的服务支持，确保业务长效快速增长</dd>
-												<dt><a href="/solutions/mobile/" title="云端移动开发">云端移动开发</a></dt>
+												<dt><a id="nav_solution_mobile" href="/solutions/mobile/" title="云端移动开发">云端移动开发</a></dt>
 												<dd>提供构思、构建、测试、部署，以及运营移动应用程序所需的端到端的解决方案</dd>
-												<dt><a href="/solutions/advertising/" title="广告数字营销">广告数字营销</a></dt>
+												<dt><a id="nav_solution_ads" href="/solutions/advertising/" title="广告数字营销">广告数字营销</a></dt>
 												<dd>为详述其业务逻辑架构及各种功能模板在 Windows Azure 中构建解决方案</dd>
-												<dt><a href="/solutions/online/" title="在线数字营销">在线数字营销</a></dt>
+												<dt><a id="nav_solution_online" href="/solutions/online/" title="在线数字营销">在线数字营销</a></dt>
 												<dd>快速、稳定、低成本、全面支持移动系统的在线数字营销平台</dd>
 											</dl>
 										</li>
 										<li>
 											<a class="menu-title expand" href="#solution_tab2" title="通用解决方案" data-toggle="tab">通用解决方案<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="solution_tab2">
-												<dt><a href="/solutions/infrastructure/" title="">基础结构服务</a></dt>
+												<dt><a id="nav_solution_infrastructure" href="/solutions/infrastructure/" title="基础结构服务">基础结构服务</a></dt>
 												<dd>了解如何使用 Windows Azure 实现虚拟机解决方案</dd>
-												<dt><a href="/solutions/data-management/" title="">数据管理</a></dt>
+												<dt><a id="nav_solution_data-management" href="/solutions/data-management/" title="数据管理">数据管理</a></dt>
 												<dd>了解如何使用 Windows Azure 实现数据服务的可伸缩性、灵活性和成本效益</dd>
-												<dt><a href="/solutions/web/" title="">Web 应用程序</a></dt>
+												<dt><a id="nav_solution_web" href="/solutions/web/" title="Web 应用程序">Web 应用程序</a></dt>
 												<dd>了解如何使用 Windows Azure 实现 Web 应用程序安全而灵活的开发、部署和扩展选项</dd>
-												<dt><a href="/solutions/dev-test/" title="">开发与测试</a></dt>
+												<dt><a id="nav_solution_dev-test" href="/solutions/dev-test/" title="开发与测试">开发与测试</a></dt>
 												<dd>了解如何在云中开发和测试</dd>
-												<dt><a href="/solutions/storage-backup-recovery/" title="">存储、备份和恢复</a></dt>
+												<dt><a id="nav_solution_backup" href="/solutions/storage-backup-recovery/" title="存储、备份和恢复">存储、备份和恢复</a></dt>
 												<dd>了解如何使用 Windows Azure 实现规模可变、耐用的云存储、备份和恢复解决方案</dd>
-												<dt><a href="/solutions/OSS/" title="">开源软件</a></dt>
+												<dt><a id="nav_solution_oss" href="/solutions/OSS/" title="开源软件">开源软件</a></dt>
 												<dd>了解如何使用 Windows Azure 实现更多的编程语言、开发工具及平台选择</dd>
-												<dt><a href="/solutions/storsimple/" title="">Storsimple</a></dt>
+												<dt><a id="nav_solution_storsimple" href="/solutions/storsimple/" title="Storsimple">Storsimple</a></dt>
 												<dd>了解业界领先的混合云存储装置如何优化企业环境的存储总成本和数据保护</dd>
-												<dt><a href="/solutions/storsimple/" title="">Project Oxford</a></dt>
-												<dd>了解微软牛津计划，试用最新智能API</dd>
 											</dl>
-											<div class="gradient-mask"></div>
+											<div class="gradient-mask mask-bottom"></div>
+											<div class="gradient-mask mask-top"></div>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li>
-							<a href="#" title="案例与伙伴"><span>案例与伙伴</span></a>
+						<li class="nav-partnerAndCase">
+							<a id="nav_case-and-partner" href="#" title="案例与伙伴"><span>案例与伙伴</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
 									<h3>案例与伙伴</h3>
@@ -199,11 +205,11 @@
 									<ul class="sub-menu">
 										<li>
 											<dl class="full-width">
-												<dt><a href="/partnerancasestudy/case-studies/" title="案例研究">案例研究</a></dt>
-												<dd>人们正在使用Windows Azure 做着令人惊叹的事，来听听他们的故事吧</dd>
-												<dt><a href="/partnerancasestudy/partner/" title="合作伙伴">合作伙伴</a></dt>
+												<dt><a id="nav_case-and-partner_case" href="/partnerancasestudy/case-studies/" title="案例研究">案例研究</a></dt>
+												<dd>人们正在使用 Windows Azure 做着令人惊叹的事，来听听他们的故事吧</dd>
+												<dt><a id="nav_case-and-partner_partner" href="/partnerancasestudy/partner/" title="合作伙伴">合作伙伴</a></dt>
 												<dd>Windows Azure 合作伙伴帮助你快速建立和运行云端业务</dd>
-												<dt><a href="#" title="ISV招募计划">ISV招募计划</a></dt>
+												<dt><a id="nav_case-and-partner_isv_plan" href="/isv-plan/" title="ISV招募计划">ISV招募计划</a></dt>
 												<dd>ISV （独立软件解决方案供应商）招募项目</dd>
 											</dl>
 										</li>
@@ -211,8 +217,8 @@
 								</div>
 							</div>
 						</li>
-						<li>
-							<a href="#" title="文档与资源"><span>文档与资源</span></a>
+						<li class="nav-document">
+							<a id="nav_documentation" href="#" title="文档与资源"><span>文档与资源</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
 									<h3>文档与资源</h3>
@@ -222,136 +228,137 @@
 								</div>
 								<div class="panel-content auto-scroll auto-height" data-fullscreen="true"
 									data-top="65" data-child=".sub-menu|.menu-child">
-									<ul class="accordian-menu sub-menu tab-nav tab-content">
+									<ul class="accordian-menu sub-menu tab-nav tab-content" data-event="mouseenter">
 										<li class="active divide-line">
 											<a class="menu-title expand" href="#documents_tab1" title="文档概览" data-toggle="tab">文档概览<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab1">
-												<dt><a href="/starter-guide/" title="入门指南">入门指南 </a></dt>
+												<dt><a id="nav_documentation_guide" href="/starter-guide/" title="入门指南">入门指南 </a></dt>
 												<dd>快速开始使用 Azure,可下载随时翻阅</dd>
-												<dt><a href="/video-center/" title="视频中心">视频中心</a></dt>
+												<dt><a id="nav_documentation_video_center" href="/video-center/" title="视频中心">视频中心</a></dt>
 												<dd>观看视频，快速开始使用 Azure</dd>
 												<dd class="divide-line"></dd>
-												<dt><a href="/manage/windows/" title="创建运行Windows的虚拟机">创建运行 Windows 的虚拟机</a></dt>
+												<dt><a id="nav_documentation_run_windows" href="/documentation/articles/virtual-machines-windows-tutorial-classic-portal/" title="创建运行Windows的虚拟机">创建运行 Windows 的虚拟机</a></dt>
 												<dd>在 Azure 门户中创建 Azure 虚拟机</dd>
-												<dt><a href="#" title="创建运行 Linux 的虚拟机">创建运行 Linux 的虚拟机</a></dt>
+												<dt><a id="nav_documentation_run_linux" href="/documentation/articles/virtual-machines-linux-tutorial/" title="创建运行 Linux 的虚拟机">创建运行 Linux 的虚拟机</a></dt>
 												<dd>使用 Azure 命令行接口创建 Azure 虚拟机</dd>
-												<dt><a href="#" title="创建一个ASP.NET Web应用">创建一个ASP.NET Web应用</a></dt>
+												<dt><a id="nav_documentation_asp" href="/documentation/articles/web-sites-dotnet-get-started/" title="创建一个ASP.NET Web应用">创建一个ASP.NET Web应用</a></dt>
 												<dd>创建一个 ASP.NET Web 应用程序并使用 Visual Studio 将其部署到 Azure 网站</dd>
-												<dt><a href="#" title="创建 Node.js 网站并部署到 Azure">创建 Node.js 网站并部署到 Azure</a></dt>
+												<dt><a id="nav_documentation_nodejs" href="/documentation/articles/web-sites-nodejs-develop-deploy-mac/" title="创建 Node.js 网站并部署到 Azure">创建 Node.js 网站并部署到 Azure</a></dt>
 												<dd>创建节点应用程序并使用 Git 将其部署到 Azure 网站</dd>
-												<dt><a href="#" title="创建 iOS 移动后端">创建 iOS 移动后端</a></dt>
+												<dt><a id="nav_documentation_ios" href="/documentation/articles/mobile-services-ios-get-started/" title="创建 iOS 移动后端">创建 iOS 移动后端</a></dt>
 												<dd>使用 Azure 移动服务向 iOS 应用添加基于云的后端服务</dd>
 											</dl>
 										</li>
 										<li>
 											<a class="menu-title" href="#documents_tab2" title="计算" data-toggle="tab">计算<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab2">
-												<dt><a href="/manage/windows/" title="虚拟机">虚拟机</a></dt>
+												<dt><a id="nav_documentation_windows" href="/documentation/services/virtual-machines/" title="虚拟机">虚拟机</a></dt>
 												<dd>只需几分钟启动，可在云中完全控制服务器</dd>
-												<dt><a href="/manage/windows/" title="网站">网站</a></dt>
+												<dt><a id="nav_documentation_website" href="/documentation/services/web-sites/" title="网站">网站</a></dt>
 												<dd>一种完全托管的平台即服务产品，可迅速构建 Web 服务</dd>
-												<dt><a href="/manage/services/cloud-services/" title="云服务">云服务</a></dt>
+												<dt><a id="nav_documentation_cloud" href="/documentation/services/cloud-services/" title="云服务">云服务</a></dt>
 												<dd>创建可灵活扩展的高可用性应用程序和 API</dd>
-												<dt><a href="/manage/services/mobile-services/" title="移动服务">移动服务</a></dt>
+												<dt><a id="nav_documentation_mobile" href="/documentation/services/mobile-services/" title="移动服务">移动服务</a></dt>
 												<dd>为任何移动应用提供可缩放并且安全的后端</dd>
-												<dt><a href="#" title="批处理">批处理</a></dt>
+												<dt><a id="nav_documentation_batch" href="/documentation/services/batch/" title="批处理（Batch）">批处理（Batch）</a></dt>
 												<dd>运行大规模的并行批处理计算作业</dd>
 											</dl>
 										</li>
 										<li>
 											<a class="menu-title" href="#documents_tab3" title="数据服务" data-toggle="tab">数据服务<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab3">
-												<dt><a href="/manage/services/storage/" title="存储">存储</a></dt>
+												<dt><a id="nav_documentation_storage" href="/documentation/services/storage/" title="存储">存储</a></dt>
 												<dd>高度持久，高可用性，且高度缩放的云存储</dd>
-												<dt><a href="/manage/services/sql-databases/" title="SQL数据库">SQL数据库</a></dt>
+												<dt><a id="nav_documentation_database" href="/documentation/services/sql-databases/" title="SQL数据库">SQL数据库</a></dt>
 												<dd>SQL 关系型数据库服务</dd>
-												<dt><a href="/manage/services/hdinsight/" title="HDInsight">HDInsight</a></dt>
+												<dt><a id="nav_documentation_hdinsight" href="/documentation/services/hdinsight/" title="HDInsight">HDInsight</a></dt>
 												<dd>云技术驱动的 hadoop 系统</dd>
-												<dt><a href="/manage/services/backup/" title="备份">备份</a></dt>
+												<dt><a id="nav_documentation_backup" href="/documentation/services/backup/" title="备份">备份</a></dt>
 												<dd>可靠、低成本且可扩展的将本地数据备份到云平台的解决方案</dd>
-												<dt><a href="/documentation/services/site-recovery/" title="站点恢复">站点恢复</a></dt>
+												<dt><a id="nav_documentation_site-recovery" href="/documentation/services/site-recovery/" title="站点恢复">站点恢复</a></dt>
 												<dd>协调在辅助位置自动复制和恢复私有云，保护重要应用程序</dd>
-												<dt><a href="/documentation/services/mysql/" title="MySQL数据库">MySQL数据库</a></dt>
+												<dt><a id="nav_documentation_mysql" href="/documentation/services/mysql/" title="MySQL Database on Azure ">MySQL Database on Azure</a></dt>
 												<dd>MySQL 关系型数据库服务，提供性能稳定、操作简单、高安全性的数据库平台</dd>
-												<dt><a href="/documentation/services/redis-cache/" title="">Redis 缓存</a></dt>
+												<dt><a id="nav_documentation_redis-cache" href="/documentation/services/redis-cache/" title="Redis 缓存">Redis 缓存</a></dt>
 												<dd>高吞吐量、低延迟数据访问，助力应用程序的快速扩展</dd>
-												<dt><a href="#" title="流分析">流分析</a></dt>
+												<dt><a id="nav_documentation_stream-analytics" href="/documentation/services/stream-analytics/" title="流分析">流分析</a></dt>
 												<dd>云中的一种事件处理引擎，可实时快速开发，对现有数据属性进行深入了解</dd>
 											</dl>
 										</li>
 										<li>
 											<a class="menu-title" href="#documents_tab4" title="应用服务" data-toggle="tab">应用服务<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab4">
-												<dt><a href="/manage/services/service-bus/" title="服务总线">服务总线</a></dt>
+												<dt><a id="nav_documentation_service-bus" href="/documentation/services/service-bus/" title="服务总线">服务总线</a></dt>
 												<dd>各个应用程序之间的消息传送基础结构，连接私有云和公有云</dd>
-												<dt><a href="/manage/services/identity/" title="">Active Directory</a></dt>
+												<dt><a id="nav_documentation_ad" href="/documentation/services/identity/" title="">Active Directory</a></dt>
 												<dd>全面且高度可用的云端身份认证和应用访问管理方案</dd>
-												<dt><a href="/services/scheduler/" title="">计划程序</a></dt>
+												<dt><a id="nav_documentation_scheduler" href="/documentation/services/scheduler/" title="">计划程序</a></dt>
 												<dd>在云平台中创建可靠的对Azure 内部和外部服务的调度</dd>
-												<dt><a href="/manage/services/cdn/" title="">CDN</a></dt>
+												<dt><a id="nav_documentation_cdn" href="/documentation/services/cdn/" title="">CDN</a></dt>
 												<dd>在全球任何位置都可提供优质的内容交付网络体验</dd>
-												<dt><a href="/documentation/services/media-services/" title="">媒体服务</a></dt>
+												<dt><a id="nav_documentation_media" href="/documentation/services/media-services/" title="">媒体服务</a></dt>
 												<dd>创建端到端的媒体工作流，提供灵活、高度可缩放的编码、打包和分发服务</dd>
-												<dt><a href="/manage/services/notification-hubs/" title="">通知中心</a></dt>
+												<dt><a id="nav_documentation_notification-hubs" href="/documentation/services/notification-hubs/" title="">通知中心</a></dt>
 												<dd>可高度扩展的跨平台推送通知的基础结构，可对通知内容定制</dd>
-												<dt><a href="#" title="">事件中心</a></dt>
+												<dt><a id="event-hubs" href="/documentation/services/event-hubs/" title="">事件中心</a></dt>
 												<dd>高度可伸缩的事件发布-订阅采集器，每秒可将数百万个事件传输到应用程序中</dd>
-												<dt><a href="/documentation/services/automation" title="">自动化</a></dt>
+												<dt><a id="nav_documentation_automation" href="/documentation/services/automation/" title="">自动化</a></dt>
 												<dd>使用流程自动化来简化云管理，节省时间、减少错误、降低运营成本</dd>
 											</dl>
 										</li>
 										<li class="divide-line">
-											<a class="menu-title" href="#documents_tab5" title="网站服务" data-toggle="tab">网站服务<i class="icon icon-arrow-top"></i></a>
+											<a class="menu-title" href="#documents_tab5" title="网络服务" data-toggle="tab">网络服务<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab5">
-												<dt><a href="/manage/services/networking/" title="虚拟网络">虚拟网络</a></dt>
+												<dt><a id="nav_documentation_network" href="/documentation/services/networking/" title="虚拟网络">虚拟网络</a></dt>
 												<dd>云端的虚拟专属网络，可通过站点到站点的 VPN 轻松扩展本地网络</dd>
-												<dt><a href="/manage/services/networking/traffic-manager/" title="流量管理器">流量管理器</a></dt>
+												<dt><a id="nav_documentation_traffic-manager" href="/documentation/services/traffic-manager/" title="流量管理器">流量管理器</a></dt>
 												<dd>为传入流量进行跨地域路由，改善应用程序的性能和可用性</dd>
-												<dt><a href="/documentation/services/application-gateway" title="应用程序网关">应用程序网关</a></dt>
+												<dt><a id="nav_documentation_application-gateway" href="/documentation/services/application-gateway/" title="应用程序网关">应用程序网关</a></dt>
 												<dd>通过提供 HTTP 负载平衡和交付控制创建高度可扩展，高可用的网站</dd>
-												<dt><a href="#" title="ExpressRoute">ExpressRoute</a></dt>
+												<dt><a id="nav_documentation_express-route" href="/documentation/services/expressroute/" title="ExpressRoute">ExpressRoute</a></dt>
 												<dd>提供与 Windows Azure 的快速、可靠的连接</dd>
 											</dl>
 										</li>
 										<li>
 											<a class="menu-title" href="#documents_tab6" title="开发文档" data-toggle="tab">开发文档<i class="icon icon-arrow-top"></i></a>
 											<dl class="menu-child tab-panel" id="documents_tab6">
-												<dt><a href="/documentation/articles/architecture-overview/" title="架构指南">架构指南</a></dt>
+												<dt><a id="nav_documentation_architecture" href="/documentation/articles/architecture-overview/" title="架构指南">架构指南</a></dt>
 												<dd>了解 Windows Azure 的构架</dd>
-												<dt><a href="/develop/other/developerdifferences/" title="开发说明">开发说明</a></dt>
+												<dt><a id="nav_documentation_dev-turorial" href="/documentation/articles/developerdifferences/" title="开发说明">开发说明</a></dt>
 												<dd>中国 Windows Azure 应用程序开发人员说明</dd>
-												<dt><a href="/develop/other/open-source-software/" title="开源软件">开源软件</a></dt>
+												<dt><a id="nav_documentation_oss" href="/develop/other/open-source-software/" title="开源软件">开源软件</a></dt>
 												<dd>开源软件开发和使用的相关说明</dd>
-												<dt><a href="/develop/net/" title=".Net">.Net</a></dt>
+												<dt><a id="nav_documentation_net" href="/develop/net/" title=".Net">.Net</a></dt>
 												<dd>.Net 开发资源</dd>
-												<dt><a href="/develop/java/" title="Java">Java</a></dt>
+												<dt><a id="nav_documentation_java" href="/develop/java/" title="Java">Java</a></dt>
 												<dd>Java 开发资源</dd>
-												<dt><a href="/develop/nodejs/" title="Node.js">Node.js</a></dt>
+												<dt><a id="nav_documentation_nodejs" href="/develop/nodejs/" title="Node.js">Node.js</a></dt>
 												<dd>Node.js 开发资源</dd>
-												<dt><a href="/develop/python/" title="Python">Python</a></dt>
+												<dt><a id="nav_documentation_python" href="/develop/python/" title="Python">Python</a></dt>
 												<dd>Python 开发资源</dd>
-												<dt><a href="/develop/ruby/" title="Ruby">Ruby</a></dt>
+												<dt><a id="nav_documentation_ruby" href="/develop/ruby/" title="Ruby">Ruby</a></dt>
 												<dd>Ruby 开发资源</dd>
-												<dt><a href="/develop/php/" title="PHP">PHP</a></dt>
+												<dt><a id="nav_documentation_php" href="/develop/php/" title="PHP">PHP</a></dt>
 												<dd>PHP 开发资源</dd>
-												<dt><a href="/develop/media-services/" title="Media">Media</a></dt>
+												<dt><a id="nav_documentation_media-services" href="/develop/media-services/" title="Media">Media</a></dt>
 												<dd>Media 开发资源</dd>
-												<dt><a href="/develop/mobile/ios/" title="iOS,Android,Windows">iOS, Android, Windows</a></dt>
+												<dt><a id="nav_documentation_ios" href="/develop/mobile/ios/" title="iOS,Android,Windows">iOS, Android, Windows</a></dt>
 												<dd>iOS, Android, Windows 开发资源</dd>
 											</dl>
-											<div class="gradient-mask"></div>
+											<div class="gradient-mask mask-bottom"></div>
+											<div class="gradient-mask mask-top"></div>
 										</li>
 										<li class="single-link">
-											<a class="no-child" href="/downloads/" title="获取你所需的 SDK 和命令行工具">工具下载</a>
+											<a id="nav_documentation_download" class="no-child" href="/downloads/" title="获取你所需的 SDK 和命令行工具">工具下载</a>
 										</li>
-										<li class="single-link">
-											<a class="no-child" href="#" title="故障排除">故障排除</a>
+										<li class="single-link hidden-all">
+											<a id="nav_documentation_troubleshoot" class="no-child" href="/troubleshoot/" title="故障排除">故障排除</a>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li>
+						<li class="nav-community">
 							<a href="#" title="云社区"><span>云社区</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
@@ -364,13 +371,13 @@
 									<ul class="sub-menu">
 										<li>
 											<dl class="full-width">
-												<dt><a href="/blog/" title="技术博客">技术博客</a></dt>
+												<dt><a id="nav_blog" href="/blog/" title="技术博客">技术博客</a></dt>
 												<dd>博客文章， 分享微软云技术专家的观点和心得</dd>
-												<dt><a href="/support/forums/" title="时事报道">时事报道</a></dt>
+												<dt><a id="nav_community_news" href="/community/news/" title="时事报道">时事报道</a></dt>
 												<dd>最热活动，一手掌握微软智能云新鲜资讯</dd>
-												<dt><a href="/support/service-dashboard/" title="技术论道">技术论道</a></dt>
+												<dt><a id="nav_community_techtalk" href="/community/techtalk/" title="技术论道">技术论道</a></dt>
 												<dd>前沿云技术，倾听微软技术大咖的独到见解</dd>
-												<dt><a href="/support/trust-center/" title="云杂谈">云杂谈</a></dt>
+												<dt><a id="nav_community_cloudworld" href="/community/cloudworld/" title="云杂谈">云杂谈</a></dt>
 												<dd>智能云行业云资讯，了解各行业与云计算的应用现状和未来发展</dd>
 											</dl>
 										</li>
@@ -378,7 +385,7 @@
 								</div>
 							</div>
 						</li>
-						<li>
+						<li class="nav-support">
 							<a href="#" title="支持"><span>支持</span></a>
 							<div class="panel-wrapper">
 								<div class="panel-title">
@@ -391,17 +398,21 @@
 									<ul class="sub-menu">
 										<li>
 											<dl class="full-width">
-												<dt><a href="/support/contact/" title="联系我们">联系我们</a></dt>
+												<dt><a id="nav_support_contact" href="/support/contact/" title="联系我们">联系我们</a></dt>
 												<dd>论坛、电话、在线申请，总之有各种方式联系到我们</dd>
-												<dt><a href="/support/forums/" title="支持计划">支持计划</a></dt>
+												<dt><a id="nav_support_forums" href="/support/plans/" title="支持计划">支持计划</a></dt>
 												<dd>看看 Windows Azure 究竟提供了哪些专业技能来提高你的工作效率</dd>
-												<dt><a href="/support/service-dashboard/" title="服务仪表盘">服务仪表盘</a></dt>
+												<dt><a id="nav_support_forums" href="/support/forums" title="论坛支持">论坛支持</a></dt>
+												<dd>访问 Azure 技术论坛与 Azure 开发者社区，随时沟通交流</dd>
+												<dt><a id="nav_support_service-dashboard" href="/support/service-dashboard/" title="服务仪表盘">服务仪表盘</a></dt>
 												<dd>Windows Azure 服务仪表报告</dd>
-												<dt><a href="/support/trust-center/" title="信任与法律">信任与法律</a></dt>
+												<dt><a id="nav_support_legal" href="/support/legal/" title="法律信息">法律信息</a></dt>
+												<dd>Windows Azure 服务运营的相关法律信息</dd>
+												<dt><a id="nav_support_trust" href="/support/trust-center/" title="信任中心">信任中心</a></dt>
 												<dd>解答您对数据隐私和安全的忧虑，方便查看购买和使用 Windows Azure 的相关规定</dd>
-												<dt><a href="/icp" title="ICP 备案">ICP 备案</a></dt>
+												<dt><a id="nav_documentation_icp" href="/icp/" title="ICP 备案">ICP 备案</a></dt>
 												<dd>看看购买 Windows Azure 服务，如何免费获取 ICP 备案帮助</dd>
-												<dt><a href="/support/faq/" title="常见问题">常见问题</a></dt>
+												<dt><a id="nav_support_faq" href="/support/faq/" title="常见问题">常见问题</a></dt>
 												<dd>有关 Windows Azure 的常见问题的快速解答</dd>
 											</dl>
 										</li>
@@ -413,10 +424,10 @@
 					<a id="header-portal-logo-id" class="portal-link" href="https://manage.windowsazure.cn/" title="管理门户">
 						管理门户
 					</a>
-					<a class="apply-trial" href="/pricing/1rmb-trial/" title="申请试用">
+					<a id="homepage-top-1rmb" class="apply-trial" href="/pricing/1rmb-trial/" title="申请试用">
 						申请试用
 					</a>
-					<a class="buy-it" href="/pricing/pia/" title="我要购买">
+					<a id="homepage-top-pia" class="buy-it" href="/pricing/pia/" title="我要购买">
 						<span>我要购买</span>
 						<i class="icon icon-arrow-right-thin"></i>
 					</a>
@@ -471,7 +482,7 @@
 					<h1>我们的独到之处</h1>
 					<h2>永不中断，安全可靠</h2>
 					<p>Windows Azure 可以轻松实现<strong>异地多点备份</strong>，使您能够构建和运行高度可用的应用程序，而不必将精力放在基础结构上。Windows Azure 能够自动为操作系统和服务打补丁，并且内置了网络负载均衡和硬件故障恢复功能。Windows Azure 甚至提供了一种部署模型，允许应用程序在不下线的情况下完成升级。</p>
-					<img class="img-responsive" src="img/windows-azure-blog-image.jpg" alt="">
+					<img class="img-responsive" src="images/windows-azure-blog-image.jpg" alt="">
 					<h1>Responsive Grid System</h1>
 					<div class="grid-demo row">
 						<div class="col-xs-6 col-sm-4 col-md-1">
@@ -531,34 +542,29 @@
 						<li>
 							<h3 class="menu-title footer-title">关注我们<i class="icon icon-arrow-top"></i></h3>
 							<ul class="menu-child">
-								<li>
-									<a href="#" title="在线咨询微软小冰">
+								<li class="hidden-all">
+									<a id="footer-xiaoice-id" href="#" title="在线咨询微软小冰">
 										<i class="icon icon-xiaoice"></i> 在线咨询微软小冰
 									</a>
 								</li>
 								<li>
-									<a href="#" title="400-089-0365">
+									<a class="not-link" href="#" title="400-089-0365">
 										<i class="icon icon-telephone"></i> 400-089-0365
 									</a>
 								</li>
 								<li>
-									<a href="http://e.weibo.com/mscloudcomputing/" title="云微博">
+									<a id="footer-weibo-id" href="http://weibo.com/mscloudcomputing" title="云微博">
 										<i class="icon icon-sinaweibo"></i> 云微博
 									</a>
 								</li>
 								<li>
-									<a href="#" title="微软云科技公众号">
+									<a id="footer-weixin-id" href="#weixinQRcodeDialog" title="微软云科技公众号" data-toggle="dialog">
 										<i class="icon icon-weixin"></i> 微软云科技公众号
 									</a>
 								</li>
 								<li>
-									<a href="/what-is-new/" title="最新公告">
+									<a id="footer-news-id" href="/what-is-new/" title="最新公告">
 										<i class="icon icon-volume"></i> 最新公告
-									</a>
-								</li>
-								<li>
-									<a href="/community/events/" title="活动">
-										<i class="icon icon-activity"></i> 活动
 									</a>
 								</li>
 							</ul>
@@ -567,7 +573,7 @@
 							<h3 class="menu-title footer-title">Windows Azure<i class="icon icon-arrow-top"></i></h3>
 							<ul class="menu-child">
 								<li>
-									<a id="footer-solutions-id" href="/zh-cn/solutions/" title="解决方案">
+									<a id="footer-solutions-id" href="/solutions/" title="解决方案">
 					                    解决方案
 					                </a>
 								</li>
@@ -577,22 +583,22 @@
 					                </a>
 								</li>
 								<li>
-									<a id="footer-price-id" href="/zh-cn/pricing/overview/" title="价格">
+									<a id="footer-price-id" href="/pricing/overview/" title="价格">
 					                    价格
 					                </a>
 								</li>
 								<li>
-									<a id="footer-casestudy-id" href="/zh-cn/partnerancasestudy/case-studies/" title="案例库">
+									<a id="footer-casestudy-id" href="/partnerancasestudy/case-studies/" title="案例库">
 					                    案例库
 					                </a>
 								</li>
 								<li>
-									<a id="footer-documentation-id" href="/zh-cn/documentation/" title="技术文档">
+									<a id="footer-documentation-id" href="/documentation/" title="技术文档">
 					                    技术文档
 					                </a>
 								</li>
 								<li>
-									<a id="footer-download-id" href="/zh-cn/downloads/?sdk=net" title="工具下载">
+									<a id="footer-download-id" href="/downloads/?sdk=net" title="工具下载">
 					                    工具下载
 					                </a>
 								</li>
@@ -602,27 +608,27 @@
 							<h3 class="menu-title footer-title">支持<i class="icon icon-arrow-top"></i></h3>
 							<ul class="menu-child">
 								<li>
-									<a id="footer-contact-id" href="/zh-cn/support/contact/" title="联系我们">
+									<a id="footer-contact-id" href="/support/contact/" title="联系我们">
 					                    联系我们
 					                </a>
 								</li>
 								<li>
-									<a id="footer-plans-id" href="/zh-cn/support/plans/" title="支持计划">
+									<a id="footer-plans-id" href="/support/plans/" title="支持计划">
 					                    支持计划
 					                </a>
 								</li>
 								<li>
-									<a id="footer-service-dashboard-id" href="/zh-cn/support/service-dashboard/" title="服务仪表盘">
+									<a id="footer-service-dashboard-id" href="/support/service-dashboard/" title="服务仪表盘">
 					                    服务仪表盘
 					                </a>
 								</li>
 								<li>
-									<a id="footer-legal-id" href="/zh-cn/support/legal/" title="法律">
+									<a id="footer-legal-id" href="/support/legal/" title="法律">
 					                    法律
 					                </a>
 								</li>
 								<li>
-									<a id="footer-support-faq-id" href="/zh-cn/support/faq/" title="常见问题">
+									<a id="footer-support-faq-id" href="/support/faq/" title="常见问题">
 					                    常见问题
 					                </a>
 								</li>
@@ -632,17 +638,17 @@
 							<h3 class="menu-title footer-title">信任中心<i class="icon icon-arrow-top"></i></h3>
 							<ul class="menu-child">
 								<li>
-									<a id="footer-privacy-id" href="/zh-cn/support/trust-center/privacy/" title="隐私">
+									<a id="footer-privacy-id" href="/support/trust-center/privacy/" title="隐私">
 					                    隐私
 					                </a>
 								</li>
 								<li>
-									<a id="footer-security-id" href="/zh-cn/support/trust-center/security/" title="安全性">
+									<a id="footer-security-id" href="/support/trust-center/security/" title="安全性">
 					                    安全性
 					                </a>
 								</li>
 								<li>
-									<a id="footer-trust-center-faq-id" href="/zh-cn/support/trust-center/faq/" title="常见问题">
+									<a id="footer-trust-center-faq-id" href="/support/trust-center/faq/" title="常见问题">
 					                    常见问题
 					                </a>
 								</li>
@@ -652,7 +658,7 @@
 							<h3 class="menu-title footer-title">反馈渠道<i class="icon icon-arrow-top"></i></h3>
 							<ul class="menu-child">
 								<li>
-									<a id="footer-privacy-id" href="/product-feedback" title="评价与反馈">
+									<a id="pdfdfooter" href="/product-feedback" title="评价与反馈">
 					                    评价与反馈
 					                </a>
 								</li>
@@ -667,7 +673,7 @@
 						<p class="footer-help clearfix">
 							<a class="" href="http://windowsazure.com/" title="不在中国区域内使用 Windows Azure?" rel="nofollow">不在中国区域内使用 Windows Azure?</a>
 							<a class="" href="http://www.miibeian.gov.cn/" title="沪 ICP 备 13015306 号-6" rel="nofollow">沪 ICP 备 13015306 号-6</a>
-							<a class="" href="/zh-cn/support/legal/privacy-statement/" title="隐私">隐私</a>
+							<a class="" href="/support/trust-center/privacy/" title="隐私">隐私</a>
 						</p>
 						<p class="copyright clearfix">
 							<a class="footer-logo window-azure" href="/" title="Windows Azure">Windows Azure</a>
@@ -681,7 +687,29 @@
 			</div>
 		</footer>
 		<!-- END: Footer -->
-
+		
+		<!--BEGIN: Weixin QR code popup window-->
+		<div id="weixinQRcodeDialog" class="dialog-container" role="dialog" data-width="350" data-height="450">
+			<div class="dialog-mask">
+						
+			</div>			
+			<div class="dialog-content">
+				<div class="dialog-header">
+					<a class="close-btn" href="#">
+						<i class="icon icon-close"></i>
+					</a>					
+				</div>
+				<div class="dialog-body">
+					<div class="weixin-qrcode">
+						<img src="/images/wexin-QR-code.jpg" alt="Wexin QR code">
+						<p class="hidden-xs hidden-sm">扫码关注<strong>Microsoft云科技</strong>官方微信，一手掌握微软云计算最新资讯。</p>
+						<p class="hidden-md hidden-lg">查找公众号<strong>Microsoft云科技</strong>，一手掌握微软云计算最新资讯。</p>
+					</div>					
+				</div>
+			</div>	
+		</div>
+		<!--END: Weixin QR code popup window-->
+		
 		<!-- BEGIN: JQuery Scripts -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 		<!-- END: JQuery Scripts -->
@@ -694,6 +722,7 @@
 		<!-- BEGIN: Page Scripts -->
 		<script src="js/common.js" type="text/javascript"></script>
 		<!-- END: Page Scripts -->
+		<script src="data/generateJSONByDOM.js" type="text/javascript"></script>
 	</body>
 
 </html>

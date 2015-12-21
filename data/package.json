@@ -1,0 +1,11 @@
+{
+  "name": "navigation-data-converter",
+  "version": "1.0.0",
+  "description": "Convert top navigation xlxs document to json file.",
+  "main": "convertXlsxToJSON.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Zhang",
+  "license": "ISC"
+}

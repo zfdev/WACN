@@ -1,0 +1,211 @@
+{
+	"": "",
+	"No": "190",
+	"Section": "Footer",
+	"Level-1": "关注我们",
+	"Level-2": "在线咨询微软小冰",
+	"Level-3": "n/a",
+	"URL Path": "",
+	"URL": "",
+	"Note": ""
+}, {
+	"": "",
+	"No": "191",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "400-089-0365",
+	"Level-3": "n/a",
+	"URL Path": "",
+	"URL": "",
+	"Note": ""
+}, {
+	"": "",
+	"No": "192",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "云微博",
+	"Level-3": "n/a",
+	"URL Path": "http://weibo.com",
+	"URL": "http://weibo.com/mscloudcomputing",
+	"Note": ""
+}, {
+	"": "",
+	"No": "193",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "微软云科技公众号",
+	"Level-3": "n/a",
+	"URL Path": "/wechat/",
+	"URL": "TBC",
+	"Note": "New added, need to check content readiness"
+}, {
+	"": "",
+	"No": "194",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "最新公告",
+	"Level-3": "n/a",
+	"URL Path": "/what-is-new/",
+	"URL": "http://www.windowsazure.cn/what-is-new/",
+	"Note": ""
+}, {
+	"": "",
+	"No": "195",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "活动",
+	"Level-3": "n/a",
+	"URL Path": "/community/",
+	"URL": "http://www.windowsazure.cn/community/events/",
+	"Note": "Remove this item from Footer"
+}, {
+	"": "",
+	"No": "196",
+	"Section": "",
+	"Level-1": "Windows Azure",
+	"Level-2": "解决方案",
+	"Level-3": "n/a",
+	"URL Path": "/solutions/",
+	"URL": "http://www.windowsazure.cn/zh-cn/solutions/",
+	"Note": ""
+}, {
+	"": "",
+	"No": "197",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "产品",
+	"Level-3": "n/a",
+	"URL Path": "/home/features/",
+	"URL": "http://www.windowsazure.cn/home/features/virtual-machines/",
+	"Note": ""
+}, {
+	"": "",
+	"No": "198",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "价格",
+	"Level-3": "n/a",
+	"URL Path": "/pricing/",
+	"URL": "http://www.windowsazure.cn/zh-cn/pricing/overview/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "199",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "案例库",
+	"Level-3": "n/a",
+	"URL Path": "/partnerancasestudy/",
+	"URL": "http://www.windowsazure.cn/zh-cn/partnerancasestudy/case-studies/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "200",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "技术文档",
+	"Level-3": "n/a",
+	"URL Path": "/documentation/",
+	"URL": "http://www.windowsazure.cn/zh-cn/documentation/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "201",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "工具下载",
+	"Level-3": "n/a",
+	"URL Path": "/downloads/",
+	"URL": "http://www.windowsazure.cn/zh-cn/downloads/?sdk=net",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "202",
+	"Section": "",
+	"Level-1": "支持",
+	"Level-2": "联系我们",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/zh-cn/support/contact/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "203",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "支持计划",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/plans/",
+	"Note": ""
+}, {
+	"": "",
+	"No": "204",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "服务仪表盘",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/zh-cn/support/service-dashboard/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "205",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "法律",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/zh-cn/support/legal/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "206",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "常见问题",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/zh-cn/support/faq/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "207",
+	"Section": "",
+	"Level-1": "信任中心",
+	"Level-2": "隐私",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/zh-cn/support/trust-center/privacy/",
+	"Note": "Remove /zh-cn/"
+}, {
+	"": "",
+	"No": "208",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "安全性",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/trust-center/security",
+	"Note": ""
+}, {
+	"": "",
+	"No": "209",
+	"Section": "",
+	"Level-1": "",
+	"Level-2": "常见问题",
+	"Level-3": "n/a",
+	"URL Path": "/support/",
+	"URL": "http://www.windowsazure.cn/support/trust-center/faq",
+	"Note": ""
+}, {
+	"": "",
+	"No": "210",
+	"Section": "",
+	"Level-1": "反馈渠道",
+	"Level-2": "评价与反馈",
+	"Level-3": "n/a",
+	"URL Path": "/product-feedback/",
+	"URL": "http://www.windowsazure.cn/product-feedback",
+	"Note": "Remove \"投票\" part"
+}

@@ -1,10 +1,29 @@
+/*! Azure UI v0.0.1*/
 ;
 (function(win) {
 	"use strict";
 	win.AUI = win.AUI || {};
 	AUI.VERSION = "0.0.1";
-	AUI.Class = function() {
-		
+	AUI.Class = function(r, s) {
+		var _mix = function(r, s){
+			for(var p in s){
+				if(s.hasOwnProperty(p)){
+					r[p] = s[p]
+				}
+			}
+		}
+		var _extend = function(){
+			var prototype = new this();
+			var SubClass = function(){
+				this.init.apply(this, arguments);
+			}
+			SubClass.prototype = prototype;
+			SubClass.prototype.constructor = SubClass;
+			return SubClass;
+		}
+		var Class = new Function();
+		Class.extend = _extend;
+		return Class;
 	}
 	AUI.Template = (function() {
 		var cache = {};
@@ -39,10 +58,6 @@
 		return tmpl;
 	})();
 
-	//实现类的继承 
-	//自动初始化
-	//观察者模式
-	//单向绑定
 })(window);
 ;
 (function(win) {
